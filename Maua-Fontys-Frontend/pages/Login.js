@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 // import Style from '../'
 
 const Login = () => {
@@ -32,19 +33,25 @@ const Login = () => {
             />
               <Text style={styles.Title}>Welcome back</Text>
               <Text style={styles.smalltext}>Please sign in</Text>
-            <TextInput
-              style={styles.input}
-              value={email}
-              onChangeText={(text) => setEmail(text)}
-              placeholder="Email@maua.br"
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="Password"
-              secureTextEntry
-              value={password}
-              onChangeText={setPassword}
-            />
+            <View style={styles.try}>
+              <Icon name="envelope" size={20} color="#095DAC" style={styles.icon} /> 
+              <TextInput
+                style={styles.input}
+                value={email}
+                onChangeText={(text) => setEmail(text)}
+                placeholder="Email@maua.br"
+              /> 
+            </View>
+            <View style={styles.try}>
+              <Icon name="lock" size={30} color="#095DAC" style={styles.icon} />
+              <TextInput
+                style={styles.input}
+                placeholder="Password"
+                secureTextEntry
+                value={password}
+                onChangeText={setPassword}
+              />
+            </View>  
             <View style={styles.checkboxContainer}>
               <TouchableOpacity
                   onPress={() => setRememberMe(!rememberMe)}
@@ -138,7 +145,15 @@ const Login = () => {
       justifyContent: 'space-between',
       padding: 10,
     },
-    button:{
+    try: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderBottomWidth: 1,
+      borderColor: '#095DAC',
+      paddingVertical: 10,
+      width: '80%',
+    },
+    button: {
       backgroundColor: '#095DAC',
       color: '#095DAC',
       height: 40,
@@ -153,6 +168,9 @@ const Login = () => {
       marginBottom: 'auto',
       fontSize: 16,
     },
+    icon: {
+      marginRight: 10,
+    },
     column: {
       flex: 1,
       margin: 5,
@@ -162,11 +180,13 @@ const Login = () => {
     },
     input: {
       width: '80%',
-      height: 40,
-      marginTop: 10,
-      padding: 5,
-      borderBottomWidth: 1,
-      borderBottomColor: '#095DAC',
+      // height: 40,
+      // marginTop: 10,
+      // padding: 5,
+      // borderBottomWidth: 1,
+      // borderBottomColor: '#095DAC',
+      flex: 1,
+      paddingLeft: 10,
     },
     // footer: {
     //     backgroundColor: 'transparent',

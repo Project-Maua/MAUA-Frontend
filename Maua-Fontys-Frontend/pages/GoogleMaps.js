@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
  },
 });
 
-export default () => (
+const GoogleMaps = () => (
    <View style={styles.container}>
      <MapView
        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
@@ -43,3 +43,5 @@ export default () => (
      <Button title="Go to Mauá" onPress={() => Linking.openURL(url)} />
    </View>
 );
+
+export default GoogleMaps

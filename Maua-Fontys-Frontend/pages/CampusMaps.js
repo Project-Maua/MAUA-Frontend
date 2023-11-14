@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { View, StyleSheet, Dimensions, Image, Alert } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import Svg, { Circle } from 'react-native-svg';

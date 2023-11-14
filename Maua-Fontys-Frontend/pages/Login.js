@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet } from 'react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
   
     const handleLogin = () => {
+      //Navigation test:
+      navigation.navigate('GoogleMaps')
+
       // Implement your login logic here
       // Typically, you would make an API call to authenticate the user
     };

@@ -22,17 +22,16 @@ const Login = () => {
         {/* Header */}
       <View style={styles.header}>
       </View>
-        {/* Body with Columns */}
+        {/* Body */}
         <View style={styles.body}>
-          {/* Column 1 */}
+          {/* Column */}
           <View style={styles.column}>
             <Image
               source={require('../assets/logo-maua.png')} 
               style={styles.logo}
             />
-          <Text style={styles.Title}>Welcome to PRINT</Text>
-            <Text style={styles.Title}>Welcome back</Text>
-            <Text style={styles.smalltext}>Please sign in</Text>
+              <Text style={styles.Title}>Welcome back</Text>
+              <Text style={styles.smalltext}>Please sign in</Text>
             <TextInput
               style={styles.input}
               value={email}
@@ -59,7 +58,17 @@ const Login = () => {
               <Text style={styles.forgotPassword}>Forgot password?</Text>
             </TouchableOpacity>
             </View>
-              <Button title="Login" onPress={handleLogin} />
+            <View style={styles.containeritem}>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={handleLogin}
+              >
+                <Text style={styles.buttonText}>Sign in</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.footer}>
+
           </View>
         </View>
       
@@ -107,12 +116,6 @@ const Login = () => {
       textAlign: 'center',
     },
     header: {
-      // height: 80,
-      // backgroundColor: 'blue',
-      // justifyContent: 'center',
-      // alignItems: 'center',
-      // width: 400,
-      // marginTop: 20,
         width: 0,
         height: 0,
         backgroundColor: 'transparent',
@@ -123,10 +126,6 @@ const Login = () => {
         borderRightColor: 'transparent',
         borderTopColor: '#095DAC',
       
-    },
-    headerText: {
-      color: 'white',
-      fontSize: 18,
     },
     logo: {
       width: 220, 
@@ -139,6 +138,21 @@ const Login = () => {
       justifyContent: 'space-between',
       padding: 10,
     },
+    button:{
+      backgroundColor: '#095DAC',
+      color: '#095DAC',
+      height: 40,
+      width: 100,
+      borderRadius: 20,
+      marginTop: 20,
+    },
+    buttonText:{
+      color: 'white',
+      textAlign: 'center',
+      marginTop: 'auto',
+      marginBottom: 'auto',
+      fontSize: 16,
+    },
     column: {
       flex: 1,
       margin: 5,
@@ -149,31 +163,55 @@ const Login = () => {
     input: {
       width: '80%',
       height: 40,
-      borderColor: 'gray',
-      borderWidth: 1,
       marginTop: 10,
       padding: 5,
+      borderBottomWidth: 1,
+      borderBottomColor: '#095DAC',
     },
-    footer: {
-      height: 50,
-      backgroundColor: 'blue',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+    // footer: {
+    //     backgroundColor: 'transparent',
+    //     borderStyle: 'solid',
+    //     borderRightWidth: 800,
+    //     borderBottomWidth: 120,
+    //     borderLeftColor: 'transparent',
+    //     borderRightColor: 'transparent',
+    //     borderBottomColor: '#095DAC',
+    // },
     footerText: {
       color: 'white',
       fontSize: 18,
     },
     Title:{
-      fontSize: 20,
+      fontSize: 30,
       color: '#095DAC',
       fontWeight: 'bold',
       textAlign: 'left', 
     },
     smalltext:{
-      fontSize: 10,
+      fontSize: 14,
       textAlign: 'left', 
-    }
+    },
+    checkboxContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 20,
+      marginTop: 20,
+    },
+    checkbox: {
+      width: 20,
+      height: 20,
+      borderColor: 'gray',
+      borderWidth: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: 5
+    },
+    checkboxText: {
+      fontSize: 16,
+    },
+     forgotPassword: {
+      marginLeft: 70,
+    },
     // Old:
     // container: {
     //   flex: 1,

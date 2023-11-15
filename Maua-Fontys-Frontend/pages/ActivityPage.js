@@ -24,6 +24,26 @@ const ActivityPage = () => {
       'location': 'Block S - room Field',
       'subscribed': 'True/False',
       'description': 'Students throw ... rockets... with water.'
+    },
+    {
+      'id': 'ac-12354',
+      'image': 'IMAGE',
+      'name': 'challenge',
+      'time': '13:30',
+      'date': '14/09/2023',
+      'location': 'room Field',
+      'subscribed': 'True/False',
+      'description': 'Students throw ... rockets... with water.'
+    },
+    {
+      'id': 'ac-1254',
+      'image': 'IMAGE',
+      'name': 'Bee',
+      'time': '16:30',
+      'date': '15/09/2023',
+      'location': 'Block Q - room Q12',
+      'subscribed': 'False',
+      'description': 'Students throw ... rockets... with water.'
     }
   ]
 
@@ -54,8 +74,9 @@ const ActivityPage = () => {
 
         <Text>University Activities</Text>
         <View style={styles.container}>
-          <Activity activity={activities[0]} />
-          <Activity activity={activities[1]} />
+          {activities.map((activity, index) => (
+            <Activity key={index} activity={activity} />
+          ))}
         </View>
       </ScrollView>
     </SafeAreaView>

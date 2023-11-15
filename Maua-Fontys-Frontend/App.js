@@ -8,7 +8,7 @@ import Agenda from './pages/Agenda'
 export default function App() {
   return (
     <View style={styles.container}>
-      <ActivityPage/>
+      <Agenda/>
       <StatusBar style="auto" />
     </View>
   );

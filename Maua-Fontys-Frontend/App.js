@@ -1,25 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import RouteSystem from "./utils/RouteSystem";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Weird app</Text>
-      <Text>Weird app</Text>
-      <Text>Weird app</Text>
-      <Text>Weird app</Text>
-      <Text>Weird app</Text>
-      <Text>Weird app</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => <RouteSystem />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App

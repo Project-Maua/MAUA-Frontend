@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View, TouchableOpacity, ViewComponent } from 'react-native';
 
-export default function Settings() {
+export default function SettingsPage() {
   return (
     <View style={styles.container}>
     <TouchableOpacity style={styles.button}>

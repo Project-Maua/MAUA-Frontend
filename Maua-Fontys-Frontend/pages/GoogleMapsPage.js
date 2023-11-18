@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
  },
 });
 
-const GoogleMaps = () => (
+const GoogleMapsPage = () => (
    <View style={styles.container}>
      <MapView
        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
@@ -44,4 +44,4 @@ const GoogleMaps = () => (
    </View>
 );
 
-export default GoogleMaps
+export default GoogleMapsPage

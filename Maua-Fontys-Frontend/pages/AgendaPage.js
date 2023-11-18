@@ -3,7 +3,7 @@ import { View, Text, ScrollView, Button, SafeAreaView, StyleSheet } from 'react-
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
 
-const Agenda = () => {
+const AgendaPage = () => {
   const activities = [
       {
         'id': 'ac-123453',
@@ -148,4 +148,4 @@ const Agenda = () => {
 //     },
   });
 
-export default Agenda;
+export default AgendaPage;

@@ -1,41 +1,36 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-const Home = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false);
+const HomePage = ({ navigation }) => { 
   
-    const handleLogin = () => {
-      // Implement your login logic here
-      // Typically, you would make an API call to authenticate the user
-    };
-  
-    const handleForgotPassword = () => {
-      // Implement your forgot password logic here
-      // This can navigate to a password reset screen or send a password reset email
-    };
-  
+  const handleCampusMap  = () => navigation.navigate('CampusMaps')
+  const handleGoogleMaps = () => navigation.navigate('GoogleMaps')
+  const handleAgenda     = () => navigation.navigate('Agenda'    )
+  const handleActivity   = () => navigation.navigate('Activity'  )
+  const handleSettings   = () => navigation.navigate('Settings'  )
+
     return (
     <View style={styles.container}>
         <View style={styles.buttonContainer}>
             <Button title="Menu" />
             <Button title="MauaLogo" />
             <Button title="NotificationsBell" />
+            <Button onPress={handleSettings} title="Settings" />
         </View>
         <View style={styles.buttonContainer}>
             <Button title="About University" />
         </View>
         <View style={styles.buttonContainer}>
             <Button title="Schedule" />
-            <Button title="Agenda" />
+            <Button onPress={handleAgenda} title="Agenda" />
         </View>
         <View style={styles.buttonContainer}>
-            <Button title="How to get to University" />
-            <Button title="Campus Map" />
+            <Button onPress={handleGoogleMaps} title="How to get to University" />
+            <Button onPress={handleCampusMap} title="Campus Map" />
         </View>
         <Text>Agenda</Text>
         <View style={styles.buttonContainer}>
+            <Button onPress={handleActivity} title="Activities" />
             <Button title="Next Activities" />
         </View>
         <Text>Activities</Text>
@@ -96,4 +91,4 @@ const Home = () => {
 //     },
   });
 
-export default Home;
+export default HomePage;

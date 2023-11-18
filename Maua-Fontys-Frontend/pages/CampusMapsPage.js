@@ -3,7 +3,7 @@ import { View, StyleSheet, Dimensions, Image, Alert } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import Svg, { Circle } from 'react-native-svg';
 
-const CampusMaps = () => {
+const CampusMapsPage = () => {
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CampusMaps;
+export default CampusMapsPage;

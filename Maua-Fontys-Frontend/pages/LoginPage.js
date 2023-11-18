@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Login = ({ navigation }) => {
+const LoginPage = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
   
-    const handleLogin = () => {
+    const handleSignIn = () => {
       //Navigation test:
-      navigation.navigate('GoogleMaps')
+      navigation.navigate('Home')
 
       // Implement your login logic here
       // Typically, you would make an API call to authenticate the user
@@ -70,7 +70,7 @@ const Login = ({ navigation }) => {
             </TouchableOpacity>
             </View>
             <View style={styles.containeritem}>
-              <TouchableOpacity
+              <TouchableOpacity onPress={handleSignIn}
                 style={styles.button}
               >
                 <Text style={styles.buttonText}>Sign in</Text>
@@ -241,5 +241,5 @@ const Login = ({ navigation }) => {
     }
   });
 
-export default Login;
+export default LoginPage;
 

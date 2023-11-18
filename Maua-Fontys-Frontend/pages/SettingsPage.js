@@ -1,18 +1,9 @@
-import {StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Octicons';
+import {View} from 'react-native';
+import SettingButton from '../components/SettingButton'
 
-const SettingButton = ({icon, text}) => {
+const SettingsPage = () => {
   return (
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>{text}</Text>
-      <Icon name={icon} style={styles.icon} />
-    </TouchableOpacity>
-  )
-}
-
-export default function SettingsPage() {
-  return (
-    <View style={styles.container}>
+    <View>
       <SettingButton text='Language' icon='globe' />
       <SettingButton text='Switch mode' icon='arrow-switch' />
       <SettingButton text='About' icon='info' />
@@ -21,25 +12,4 @@ export default function SettingsPage() {
   )
 }
 
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: '#095DAC',
-    padding: 10,
-    margin: 10,
-    borderRadius: 5,
-    width: '95%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    display:'flex'
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: 'bold',
-  },
-  icon: {
-    position: 'absolute',
-    right: '5%',
-    color: "white",
-    fontSize: 25
-  }
-});
+export default SettingsPage

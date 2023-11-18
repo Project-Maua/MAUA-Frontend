@@ -1,44 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, TouchableOpacity, ViewComponent } from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Octicons';
+
+const SettingButton = ({icon, text}) => {
+  return (
+    <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}>{text}</Text>
+      <Icon name={icon} style={styles.icon} />
+    </TouchableOpacity>
+  )
+}
 
 export default function SettingsPage() {
   return (
     <View style={styles.container}>
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Language</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Switch mode</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>About</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Logout</Text>
-    </TouchableOpacity>
-  </View>
-       
-  );
+      <SettingButton text='Language' icon='globe' />
+      <SettingButton text='Switch mode' icon='arrow-switch' />
+      <SettingButton text='About' icon='info' />
+      <SettingButton text='Logout' icon='sign-out' />
+    </View>    
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: '#095DAC',
     padding: 10,
     margin: 10,
     borderRadius: 5,
-    width: 300
+    width: '95%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    display:'flex'
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
   },
+  icon: {
+    position: 'absolute',
+    right: '5%',
+    color: "white",
+    fontSize: 25
+  }
 });

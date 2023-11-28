@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
+import Menu from '../components/Menu';
   const title = "Welcome!";
   const message = "This is a sample card box in React Native.";
   const cardImage = require('../assets/schoolmaua.jpg');
@@ -11,18 +12,9 @@ const HomePage = () => {
     <ScrollView>
     <View>
       <View style={""}>
-        <View style={styles.header}>
-          <TouchableOpacity style={styles.icon}>
-            <Icon name="bars" size={25} color="#095DAC" />
-          </TouchableOpacity>
-          <Image
-                source={require('../assets/logo-maua.png')} 
-                style={styles.logo}
-              />
-          <TouchableOpacity style={styles.icon}>
-            <Icon name="bell" size={25} color="#095DAC" />
-          </TouchableOpacity>
-        </View>
+        <Menu>
+
+        </Menu>
         <View style={styles.imageContainer}>
           <Image source={headerImage} style={styles.headerImage} />
           <View style={styles.overlay}>
@@ -119,15 +111,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    paddingHorizontal: 20,
-    paddingTop: 40,
-    paddingBottom: 10,
-  },
   headerImage: {
     width: '97%',
     height: 170,
@@ -137,9 +120,6 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  icon: {
-    padding: 5,
-  },
   overlay: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(60, 60, 60, 0.2)', 
@@ -147,10 +127,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     width: '97%',
-  },
-  logo: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   imageContainer: {
     position: 'relative',
@@ -165,10 +141,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
-  },
-  logo: {
-    width: 90, 
-    height: 40,
   },
   card: {
     width: "47%",

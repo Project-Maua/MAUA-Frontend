@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     logo: {
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
+    width: 90, 
+    height: 40,
+  },
 });
 export default Menu;

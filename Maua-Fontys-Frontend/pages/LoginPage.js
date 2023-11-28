@@ -71,7 +71,7 @@ const LoginPage = ({ navigation }) => {
               <Text style={customStyles.forgotPassword}>Forgot password?</Text>
             </TouchableOpacity>
             </View>
-            <View style={customStyles.containeritem}>
+            <View style={customStyles.containeritem}>            
               <TouchableOpacity onPress={handleSignIn}
                 style={customStyles.button}
               >

@@ -36,8 +36,8 @@ const GoogleMapsPage = () => (
               latitude: -23.647955,
               longitude:-46.574245,
             }}
-            title={"title"}
-            description={"description"}
+            title={"Instituto Mauá de Tecnologia"}
+            description={""}
          />
      </MapView>
      <Button title="Go to Mauá" onPress={() => Linking.openURL(url)} />

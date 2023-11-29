@@ -14,13 +14,13 @@ const Stack = createNativeStackNavigator();
 //All screens must be put inside the Stack.Navigater in order to be available
 const RouteSystem = () => (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Login" screenOptions={headerStyle}>
+            <Stack.Screen name="Login"          component={LoginPage}  options={loginHeaderStyle}    />
             <Stack.Screen name="Activity"       component={ActivityPage}    />
             <Stack.Screen name="Agenda"         component={AgendaPage}      />
             <Stack.Screen name="CampusMaps"     component={CampusMapsPage}  />
             <Stack.Screen name="GoogleMaps"     component={GoogleMapsPage}  />
             <Stack.Screen name="Home"           component={HomePage}        />
-            <Stack.Screen name="Login"          component={LoginPage}       />
             <Stack.Screen name="Settings"       component={SettingsPage}    />
             <Stack.Screen name="Informations"   component={Informations}    />
         </Stack.Navigator>
@@ -28,3 +28,15 @@ const RouteSystem = () => (
 )
 
 export default RouteSystem
+
+const headerStyle = { 
+    headerBackTitleVisible: false,
+    headerTitle:'',
+    headerTintColor: '#095DAC',
+    headerStyle: { backgroundColor: 'white' },
+    navigationBarColor: 'white'
+}
+
+const loginHeaderStyle = {
+    headerShown: false
+}

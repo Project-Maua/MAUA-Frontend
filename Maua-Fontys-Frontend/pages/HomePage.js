@@ -6,7 +6,43 @@ import Menu from '../components/Menu';
   const message = "This is a sample card box in React Native.";
   const cardImage = require('../assets/schoolmaua.jpg');
   const headerImage = require('../assets/schoolmaua.jpg');
-const HomePage = () => {
+const HomePage = ({ navigation }) => {
+
+  const handleAgenda = () => {
+    //Navigation test:
+    navigation.navigate('Agenda')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleActivity = () => {
+    //Navigation test:
+    navigation.navigate('Activity')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleCampusMaps = () => {
+    //Navigation test:
+    navigation.navigate('CampusMaps')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleGoogleMaps = () => {
+    //Navigation test:
+    navigation.navigate('GoogleMaps')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleInformations = () => {
+    //Navigation test:
+    navigation.navigate('Informations')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
   return (
     <SafeAreaView>
     <ScrollView>
@@ -22,19 +58,19 @@ const HomePage = () => {
           </View>
         </View>
         <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.containerbutton} >
+            <TouchableOpacity style={styles.containerbutton} onPress={handleAgenda} >
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="calendar" size={25} color="white" style={styles.buttonIcon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton}>
+            <TouchableOpacity style={styles.containerbutton} onPress={handleCampusMaps}>
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="graduation-cap" size={25} color="white" style={styles.buttonIcon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton}>
+            <TouchableOpacity style={styles.containerbutton} onPress={handleGoogleMaps}>
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="compass" size={25} color="white" style={styles.buttonIcon} />
@@ -42,7 +78,7 @@ const HomePage = () => {
             </TouchableOpacity>
         </View>
         <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.containerbutton}>
+        <TouchableOpacity style={styles.containerbutton} onPress={handleActivity}>
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="play" size={25} color="white" style={styles.buttonIcon} />

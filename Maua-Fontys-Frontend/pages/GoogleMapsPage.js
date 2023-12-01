@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { View, StyleSheet, Button, Linking } from 'react-native';
+import { View, StyleSheet, Text, Linking, TouchableOpacity } from 'react-native';
 // Adicionar essa linha
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
@@ -17,6 +17,22 @@ const styles = StyleSheet.create({
  map: {
    ...StyleSheet.absoluteFillObject,
  },
+ button: {
+  backgroundColor: '#095DAC',
+  color: '#095DAC',
+  height: 40,
+  width: 100,
+  borderRadius: 20,
+  marginTop: 20,
+  marginBottom:20
+},
+buttonText:{
+  color: 'white',
+  textAlign: 'center',
+  marginTop: 'auto',
+  marginBottom: 'auto',
+  fontSize: 16,
+},
 });
 
 const GoogleMapsPage = () => (
@@ -40,7 +56,11 @@ const GoogleMapsPage = () => (
             description={""}
          />
      </MapView>
-     <Button title="Go to Mauá" onPress={() => Linking.openURL(url)} />
+     
+     <TouchableOpacity style={styles.button} title="Go to Mauá" onPress={() => Linking.openURL(url)}>
+      <Text style={styles.buttonText}>Got to Maua</Text>
+      </TouchableOpacity>
+     
    </View>
 );
 

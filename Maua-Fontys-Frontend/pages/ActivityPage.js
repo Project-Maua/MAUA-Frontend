@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, Button, StyleSheet } from 'react-native';
 import Activity from '../components/Activity.js';
 
@@ -46,7 +46,8 @@ const ActivityPage = () => {
       'description': 'Students throw ... rockets... with water.'
     }
   ]
-
+  const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -60,7 +61,25 @@ const ActivityPage = () => {
     // Implement your forgot password logic here
     // This can navigate to a password reset screen or send a password reset email
   };
+  const getActivities = async () => {
+    try {
+      const response = await fetch('https://reactnative.dev/movies.json',{
+        header:{
+          "Content-Type":"application/json"
+        }
+      });
+      const json = await response.json();
+      setData(json.movies);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
+    getActivities();
+  }, []);
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>

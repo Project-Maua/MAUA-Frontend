@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Button, SafeAreaView, StyleSheet } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
 
 const AgendaPage = () => {
+  const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const activities = [
       {
         'id': 'ac-123453',
@@ -60,7 +62,26 @@ const AgendaPage = () => {
       // Implement your forgot password logic here
       // This can navigate to a password reset screen or send a password reset email
     };
-  
+    const getActivities = async () => {
+      try {
+        const response = await fetch('https://reactnative.dev/movies.json',{
+          header:{
+            "Content-Type":"application/json"
+          }
+        });
+        const json = await response.json();
+        setData(json.movies);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    useEffect(() => {
+      getActivities();
+    }, []);
+    console.log(data)
     return (
       <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>

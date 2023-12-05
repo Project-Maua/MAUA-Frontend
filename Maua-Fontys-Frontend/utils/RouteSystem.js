@@ -16,7 +16,7 @@ import AddNotificationPage from '../pages/AddNotificationPage';
 import { TouchableOpacity} from 'react-native';
 import { HeaderButtons } from 'react-navigation-header-buttons';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import MauaLogo from '../pages/MauaLogo'
+import MauaLogo from '../components/MauaLogo'
 
 const Stack = createNativeStackNavigator();
 

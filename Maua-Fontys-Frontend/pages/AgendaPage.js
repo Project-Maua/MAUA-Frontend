@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Button, SafeAreaView, StyleSheet } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
-import Menu from '../components/Menu';
+
 
 const AgendaPage = () => {
   const [data, setData] = useState([]);
@@ -85,7 +85,6 @@ const AgendaPage = () => {
     console.log(data)
     return (
       <SafeAreaView style={styles.safeArea}>
-        <Menu></Menu>
       
       <View style={styles.agendaContainer}>
         {/* Replace the Button with the Calendar component */}

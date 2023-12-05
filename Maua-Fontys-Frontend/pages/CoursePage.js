@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Course from '../components/Course.js';
-import Menu from '../components/Menu';
+
 const CoursePage = ({navigation}) => {
     const handleCourses = () => {
         navigation.navigate('Courses')
@@ -63,7 +63,6 @@ const CoursePage = ({navigation}) => {
     <ScrollView>
     <View>
       <View style={styles.background}>
-        <Menu />
         <View style={styles.topBar}>
             <TouchableOpacity style={styles.containerButton} onPress={handleAbout} >
                 <Text style={styles.containerText}>About</Text>

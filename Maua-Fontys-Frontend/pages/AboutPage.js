@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Course from '../components/Course.js';
-import Menu from '../components/Menu';
+
 const cardImage = require('../assets/schoolmaua.jpg');
 const AboutPage = ({navigation}) => {
     const handleCourses = () => {
@@ -86,7 +86,6 @@ const AboutPage = ({navigation}) => {
     <ScrollView>
     <View>
       <View style={styles.background}>
-        <Menu />
         <View style={styles.topBar}>
             <TouchableOpacity style={styles.containerActiveButton} onPress={handleAbout} >
                 <Text style={styles.containerActiveText}>About</Text>

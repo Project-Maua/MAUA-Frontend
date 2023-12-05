@@ -13,40 +13,53 @@ import OrginisationPage from '../pages/OrginisationPage';
 import StudentOrginisationPage from '../pages/StudentOrginisationPage';
 import NotificationPage from '../pages/NotificationPage';
 import AddNotificationPage from '../pages/AddNotificationPage';
+import { TouchableOpacity} from 'react-native';
+import { HeaderButtons } from 'react-navigation-header-buttons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import MauaLogo from '../pages/MauaLogo'
 
 const Stack = createNativeStackNavigator();
 
 //All screens must be put inside the Stack.Navigater in order to be available
 const RouteSystem = () => (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login" screenOptions={headerStyle}>
-            <Stack.Screen name="Login"                  component={LoginPage}  options={loginHeaderStyle}    />
-            <Stack.Screen name="Activity"               component={ActivityPage}    />
-            <Stack.Screen name="Agenda"                 component={AgendaPage}      />
-            <Stack.Screen name="CampusMaps"             component={CampusMapsPage}  />
-            <Stack.Screen name="GoogleMaps"             component={GoogleMapsPage}  />
-            <Stack.Screen name="Home"                   component={HomePage}        />
-            <Stack.Screen name="Settings"               component={SettingsPage}    />
-            <Stack.Screen name="About"                  component={AboutPage}    />
-            <Stack.Screen name="Courses"                component={CoursesPage}    />
-            <Stack.Screen name="Orginisation"           component={OrginisationPage}    />
-            <Stack.Screen name="StudentOrginisation"    component={StudentOrginisationPage}    />
-            <Stack.Screen name="Notification"           component={NotificationPage}    />
-            <Stack.Screen name="AddNotification"        component={AddNotificationPage}    />
+        <Stack.Navigator initialRouteName="Login" screenOptions={headerConfiguration}>
+            <Stack.Screen name="Login"               component={LoginPage}  options={ {headerShown: false }} />
+            <Stack.Screen name="Activity"            component={ActivityPage}            />
+            <Stack.Screen name="Agenda"              component={AgendaPage}              />
+            <Stack.Screen name="CampusMaps"          component={CampusMapsPage}          />
+            <Stack.Screen name="GoogleMaps"          component={GoogleMapsPage}          />
+            <Stack.Screen name="Home"                component={HomePage}                />
+            <Stack.Screen name="Settings"            component={SettingsPage}            />
+            <Stack.Screen name="About"               component={AboutPage}               />
+            <Stack.Screen name="Courses"             component={CoursesPage}             />
+            <Stack.Screen name="Orginisation"        component={OrginisationPage}        />
+            <Stack.Screen name="StudentOrginisation" component={StudentOrginisationPage} />
+            <Stack.Screen name="Notification"        component={NotificationPage}        />
+            <Stack.Screen name="AddNotification"     component={AddNotificationPage}     />
         </Stack.Navigator>
     </NavigationContainer>
 )
 
-export default RouteSystem
-
-const headerStyle = { 
+const headerConfiguration = ({navigation}) => ({ 
     headerBackTitleVisible: false,
-    headerTitle:'',
+    headerTitle: () => (<MauaLogo/>),
+    headerTitleAlign: 'center',
     headerTintColor: '#095DAC',
-    headerStyle: { backgroundColor: 'white' },
-    navigationBarColor: 'white'
-}
+    headerRight: () => (<RightButtons navigation={navigation}/>)
+})
 
-const loginHeaderStyle = {
-    headerShown: false
-}
+//Header Components
+const RightButtons = ({ navigation }) => (
+    <HeaderButtons>
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+            <Icon name="gear" size={25} color="#095DAC"/>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+            <Icon name="bell" size={25} color="#095DAC" />
+        </TouchableOpacity>
+    </HeaderButtons>
+)
+
+export default RouteSystem

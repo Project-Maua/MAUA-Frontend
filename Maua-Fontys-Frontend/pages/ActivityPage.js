@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Activity from '../components/Activity.js';
-import Menu from '../components/Menu';
+
 const headerImage = require('../assets/schoolmaua.jpg');
 const title = "Welcome!";
   const message = "This is a sample card box in React Native.";
@@ -78,7 +78,6 @@ const ActivityPage = () => {
     <ScrollView>
     <View>
       <View style={""}>
-        <Menu />
         <View style={styles.imageContainer}>
           <Image source={headerImage} style={styles.headerImage} />
           <View style={styles.overlay}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
-import Menu from '../components/Menu';
+
 const headerImage = require('../assets/schoolmaua.jpg');
 const title = "Welcome!";
   const message = "This is a sample card box in React Native.";

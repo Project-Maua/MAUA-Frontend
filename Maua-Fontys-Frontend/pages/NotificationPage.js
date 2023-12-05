@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
-import Menu from '../components/Menu';
+
 import Notifications from '../components/Notifications';
 
 const NotificationPage = () => {
@@ -26,9 +26,6 @@ const NotificationPage = () => {
         <SafeAreaView>
             <ScrollView>
                 <View>
-                    <Menu>
-
-                    </Menu>
                     <Text style={styles.textbetween}>Notifications info</Text>
                     <View style={styles.agendaMessageContainer}>
                         <Text style={styles.agendaMessage}>What can you find?</Text>

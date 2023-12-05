@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
-import Menu from '../components/Menu';
-const headerImage = require('../assets/schoolmaua.jpg');
-const title = "Welcome!";
-  const message = "This is a sample card box in React Native.";
-  const cardImage = require('../assets/schoolmaua.jpg');
-const Activity = (props) => {
-    const [activity, setActivity] = useState(props.activity)
+const cardImage = require('../assets/schoolmaua.jpg');
+const Course = (props) => {
+    const [course, setCourse] = useState(props.course)
 
     return (
-    <View style={styles.activity}>
+    <View style={styles.course}>
       <Image source={cardImage} style={styles.cardImage} />
         <View style={styles.content}>
-            <Text style={styles.title}>{activity.name}</Text>
-            <Text style={styles.message}>{activity.description}</Text>
-            <Text>{activity.subscribed}</Text>
+            <Text style={styles.title}>{course.name}</Text>
+            <Text style={styles.message}>{course.description}</Text>
               <View style={styles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={styles.button}
@@ -77,4 +72,4 @@ cardImage: {
 },
   });
 
-export default Activity;
+export default Course;

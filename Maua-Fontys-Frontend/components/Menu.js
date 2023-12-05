@@ -2,11 +2,18 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Menu = () => {
+const Menu = ({ navigation }) => {
+    const handleAgenda = () => {
+        //Navigation test:
+        navigation.navigate('Agenda')
+    
+        // Implement your login logic here
+        // Typically, you would make an API call to authenticate the user
+      };
     return (
     <View style={styles.header}>
-            <TouchableOpacity style={styles.icon}>
-                <Icon name="bars" size={25} color="#095DAC" />
+            <TouchableOpacity style={styles.icon} onPress={handleAgenda}>
+                <Icon name="bars" size={25} color="#095DAC"/>
             </TouchableOpacity>
             <Image
                     source={require('../assets/logo-maua.png')} 

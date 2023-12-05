@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Button, SafeAreaView, StyleSheet } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
+import Menu from '../components/Menu';
 
 const AgendaPage = () => {
   const [data, setData] = useState([]);
@@ -84,16 +85,11 @@ const AgendaPage = () => {
     console.log(data)
     return (
       <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <View style={styles.buttonContainer}>
-          <Button title="Menu" />
-          <Button title="MauaLogo" />
-          <Button title="NotificationsBell" />
-        </View>
-      </View>
-      <View style={styles.container}>
+        <Menu></Menu>
+      
+      <View style={styles.agendaContainer}>
         {/* Replace the Button with the Calendar component */}
-        <Calendar
+        <Calendar style={styles.agenda}
           // You can customize the calendar props here
           onDayPress={(day) => {
             // Handle day press event
@@ -101,25 +97,42 @@ const AgendaPage = () => {
           }}
         />
       </View>
+      <View style={styles.containerBackground}>
       <ScrollView contentContainerStyle={styles.container}>
         <Text>University Activities</Text>
-        <View style={styles.container}>
+        <View style={styles.activityContainer}>
           {activities.map((activity, index) => (
             <Activity key={index} activity={activity} />
           ))}
         </View>
       </ScrollView>
+      </View>
     </SafeAreaView>
+
 
     );
   };
   
   const styles = StyleSheet.create({
+    agendaContainer: {
+      backgroundColor: '#095dac',
+      padding: 20
+    },
+    agenda: {
+      borderRadius: 20,
+      padding: 10
+    },
+    safeArea: {
+      backgroundColor: '#095dac'
+    },
     container: {
       flexGrow: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      paddingVertical: 20, // Adjust as needed
+      paddingVertical: 20,
+       // Adjust as needed
+       borderRadius: 20,
+       backgroundColor: '#fff'
     },
     buttonContainer: {
       display: 'flex',
@@ -134,39 +147,6 @@ const AgendaPage = () => {
       padding: 15,
       alignItems: 'center',
     },
-//     title: {
-//       fontSize: 24,
-//       marginBottom: 20,
-//     },
-//     input: {
-//       width: '100%',
-//       height: 40,
-//       borderColor: 'gray',
-//       borderWidth: 1,
-//       marginBottom: 20,
-//       paddingHorizontal: 10,
-//     },
-//     checkboxContainer: {
-//       flexDirection: 'row',
-//       alignItems: 'center',
-//       marginBottom: 20,
-//     },
-//     checkbox: {
-//       width: 20,
-//       height: 20,
-//       borderColor: 'gray',
-//       borderWidth: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       marginRight: 5
-//     },
-//     checkboxText: {
-//       fontSize: 16,
-//     },
-//     forgotPassword: {
-//       color: 'blue',
-//       marginLeft: 10
-//     },
   });
 
 export default AgendaPage;

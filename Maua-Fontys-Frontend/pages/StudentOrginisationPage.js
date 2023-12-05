@@ -3,52 +3,22 @@ import { SafeAreaView, View, ScrollView, Text, Button, StyleSheet, Image, Toucha
 import Activity from '../components/Activity.js';
 import Menu from '../components/Menu';
 const headerImage = require('../assets/schoolmaua.jpg');
-const title = "Welcome!";
-  const message = "This is a sample card box in React Native.";
   const cardImage = require('../assets/schoolmaua.jpg');
-const ActivityPage = () => {
+const StudentOrginisationPage = () => {
 
-  const activities = [
+  const StudentOrg = [
     {
-      'id': 'ac-123453',
-      'image': '../mocks/images/tracking.jpg',
-      'name': 'Tracking',
-      'time': '11:30',
-      'date': '13/09/2023',
-      'location': 'Block D - room D1',
-      'subscribed': 'True/False',
-      'description': 'Students will tack ... use time... calculus.'
+      'id': 'or-332453', 
+      'image': 'https://example.com/image332453', 
+      'name': 'Nawat Games', 
+      'description': 'Build games ... like crazy... nonstop... Unity... breaks everything...',
     },
     {
-      'id': 'ac-123454',
-      'image': 'IMAGE',
-      'name': 'Rocket challenge',
-      'time': '11:30',
-      'date': '13/09/2023',
-      'location': 'Block S - room Field',
-      'subscribed': 'True/False',
-      'description': 'Students throw ... rockets... with water.'
-    },
-    {
-      'id': 'ac-12354',
-      'image': 'IMAGE',
-      'name': 'challenge',
-      'time': '13:30',
-      'date': '14/09/2023',
-      'location': 'room Field',
-      'subscribed': 'True/False',
-      'description': 'Students throw ... rockets... with water.'
-    },
-    {
-      'id': 'ac-1254',
-      'image': 'IMAGE',
-      'name': 'Bee',
-      'time': '16:30',
-      'date': '15/09/2023',
-      'location': 'Block Q - room Q12',
-      'subscribed': 'False',
-      'description': 'Students throw ... rockets... with water.'
-    }
+      'id': 'or-332459', 
+      'image': 'https://example.com/image332459', 
+      'name': 'Bateria Mauá', 
+      'description': 'Play the drums... always the... same... music in front of... Mauá...', 
+    } 
   ]
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -82,13 +52,13 @@ const ActivityPage = () => {
         <View style={styles.imageContainer}>
           <Image source={headerImage} style={styles.headerImage} />
           <View style={styles.overlay}>
-            <Text style={styles.text}>University of Technology Maua</Text>
+            <Text style={styles.text}>Student orginisations of Maua</Text>
           </View>
         </View>
-        <Text style={styles.textbetween}>University activities</Text>
+        <Text style={styles.textbetween}>Orginisations</Text>
         <View style={styles.rowmiddle}>
               <View style={styles.container}>
-                {activities.map((activity, index) => (
+                {StudentOrg.map((activity, index) => (
                   <Activity key={index} activity={activity} />
                 ))}
               </View>
@@ -196,4 +166,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ActivityPage;
+export default StudentOrginisationPage;

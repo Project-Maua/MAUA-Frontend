@@ -38,19 +38,43 @@ const HomePage = ({ navigation }) => {
   };
   const handleInformations = () => {
     //Navigation test:
-    navigation.navigate('Informations')
+    navigation.navigate('About')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
+  const handleStudentOrginisation = () => {
+    //Navigation test:
+    navigation.navigate('StudentOrginisation')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleNotification = () => {
+    //Navigation test:
+    navigation.navigate('Notification')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+
   return (
     <SafeAreaView>
     <ScrollView>
     <View>
       <View style={""}>
-        <Menu>
-
-        </Menu>
+      <View style={styles.header}>
+            <TouchableOpacity style={styles.icon}>
+                <Icon name="bars" size={25} color="#095DAC"/>
+            </TouchableOpacity>
+            <Image
+                    source={require('../assets/logo-maua.png')} 
+                    style={styles.logo}
+                />
+            <TouchableOpacity style={styles.icon} onPress={handleNotification}>
+                <Icon name="bell" size={25} color="#095DAC" />
+            </TouchableOpacity>
+    </View>
         <View style={styles.imageContainer}>
           <Image source={headerImage} style={styles.headerImage} />
           <View style={styles.overlay}>
@@ -84,13 +108,13 @@ const HomePage = ({ navigation }) => {
                 <Icon name="play" size={25} color="white" style={styles.buttonIcon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton}>
+            <TouchableOpacity style={styles.containerbutton} onPress={handleStudentOrginisation}>
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="users" size={25} color="white" style={styles.buttonIcon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton}>
+            <TouchableOpacity style={styles.containerbutton} onPress={handleInformations}>
               <Image source={cardImage} style={styles.containerImage}></Image>
               <View style={styles.overlay}>
                 <Icon name="info-circle" type="font-awesome" size={25} color="white" style={styles.buttonIcon} />
@@ -143,6 +167,23 @@ const HomePage = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  //Menu
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+    paddingTop: 40,
+    paddingBottom: 10,
+  },
+  icon: {
+      padding: 5,
+  },
+  logo: {
+  width: 90, 
+  height: 40,
+},
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',

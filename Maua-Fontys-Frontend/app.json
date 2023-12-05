@@ -4,10 +4,10 @@
       "slug": "Maua-Fontys-Frontend",
       "version": "1.0.0",
       "orientation": "portrait",
-      "icon": "./assets/icon.png",
+      "icon": "./assets/logo-maua.png",
       "userInterfaceStyle": "light",
       "splash": {
-        "image": "./assets/splash.png",
+        "image": "./assets/logo-maua.png",
         "resizeMode": "contain",
         "backgroundColor": "#ffffff"
       },

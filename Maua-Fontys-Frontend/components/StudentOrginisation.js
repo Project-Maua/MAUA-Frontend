@@ -5,16 +5,16 @@ const headerImage = require('../assets/schoolmaua.jpg');
 const title = "Welcome!";
   const message = "This is a sample card box in React Native.";
   const cardImage = require('../assets/schoolmaua.jpg');
-const Activity = (props) => {
-    const [activity, setActivity] = useState(props.activity)
+const StudentOrginisation = (props) => {
+    const [StudentOrg, setStudentOrginisation] = useState(props.StudentOrginisation)
 
     return (
-    <View style={styles.activity}>
+    <View style={styles.StudentOrg}>
       <Image source={cardImage} style={styles.cardImage} />
         <View style={styles.content}>
-            <Text style={styles.title}>{activity.name}</Text>
-            <Text style={styles.message}>{activity.description}</Text>
-            <Text>{activity.subscribed}</Text>
+            <Text style={styles.title}>{StudentOrg.name}</Text>
+            <Text style={styles.message}>{StudentOrg.description}</Text>
+            <Text>{StudentOrg.subscribed}</Text>
               <View style={styles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={styles.button}
@@ -77,4 +77,4 @@ cardImage: {
 },
   });
 
-export default Activity;
+export default StudentOrginisation;

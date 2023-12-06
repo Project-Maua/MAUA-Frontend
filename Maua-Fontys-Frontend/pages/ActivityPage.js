@@ -3,12 +3,16 @@ import { SafeAreaView, View, ScrollView, Text, Image, TouchableOpacity, Icon } f
 import Activity from '../components/Activity.js';
 import {customStyles} from '../assets/style';
 import Menu from '../components/Menu.js';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 
 const headerImage = require('../assets/schoolmaua.jpg');
 const title = "Welcome!";
 const message = "This is a sample card box in React Native.";
 const cardImage = require('../assets/schoolmaua.jpg');
 const ActivityPage = ({}) => {
+
+  const {t, i18n} = useTranslation()
 
   const activities = [
     {
@@ -81,10 +85,10 @@ const ActivityPage = ({}) => {
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>
-            <Text style={customStyles.header_text}>University of Technology Maua</Text>
+            <Text style={customStyles.header_text}>{t("University of Technology Maua")}</Text>
           </View>
         </View>
-        <Text style={customStyles.body_text}>University activities</Text>
+        <Text style={customStyles.body_text}>{t("University Activities")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
                 {activities.map((activity, index) => (

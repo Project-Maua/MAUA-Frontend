@@ -3,9 +3,13 @@ import { SafeAreaView, View, ScrollView, Text,  Image, TouchableOpacity } from '
 import Activity from '../components/Activity.js';
 import Menu from '../components/Menu';
 import {customStyles} from '../assets/style';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 const headerImage = require('../assets/schoolmaua.jpg');
   const cardImage = require('../assets/schoolmaua.jpg');
-const StudentOrginisationPage = () => {
+const StudentOrganisationPage = () => {
+
+  const {t, i18n} = useTranslation()
 
   const StudentOrg = [
     {
@@ -53,10 +57,10 @@ const StudentOrginisationPage = () => {
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>
-            <Text style={customStyles.header_text}>Student orginisations of Maua</Text>
+            <Text style={customStyles.header_text}>{t("Student organisations of Maua")}</Text>
           </View>
         </View>
-        <Text style={customStyles.body_text}>Orginisations</Text>
+        <Text style={customStyles.body_text}>{t("Organisations")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
                 {StudentOrg.map((activity, index) => (
@@ -71,4 +75,4 @@ const StudentOrginisationPage = () => {
   );
 };
 
-export default StudentOrginisationPage;
+export default StudentOrganisationPage;

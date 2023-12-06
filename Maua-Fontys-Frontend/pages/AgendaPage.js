@@ -4,10 +4,13 @@ import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
 import {customStyles} from '../assets/style';
 import Menu from '../components/Menu';
-
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 
 
 const AgendaPage = () => {
+
+  const {t, i18n} = useTranslation()
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const activities = [
@@ -84,7 +87,7 @@ const AgendaPage = () => {
         />
       </View>
       <ScrollView contentContainerStyle={customStyles.agenda_activity_container}>
-      <Text style={customStyles.body_text}>University activities</Text>
+      <Text style={customStyles.body_text}>{t("University Activities")}</Text>
         <View style={""}>
           {activities.map((activity, index) => (
             <Activity key={index} activity={activity} />

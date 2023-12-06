@@ -1,0 +1,44 @@
+{
+    "translation": {
+        "Welcome back": "Welcome back",
+        "Please sign in" : "Please sign in",
+        "Remember me" : "Remember me",
+        "Forgot password?": "Forgot password?",
+        "Sign in": "Sign in",
+
+        "Language": "Language",
+        "Switch mode": "Switch mode",
+        "About": "About",
+        "Logout": "Logout",
+
+        "University of Technology Maua": "University of Technology Maua",
+        "6th of February | Tuesday": "6th of February | Tuesday",
+        "Location Maua Building A": "Location Maua Building A",
+        "Maua activities": "Maua activities",
+        "Welcome!": "Welcome!",
+        "This is a sample card box in React Native.": "This is a sample card box in React Native.",
+        "More info": "More info",
+
+        "University Activities": "University Activities",
+        "Tracking": "Tracking",
+        
+        "Go to Maua": "Go to Maua",
+
+        "Student organisations of Maua": "Student organisations of Maua",
+        "Organisations": "Organisations",
+
+        "Courses": "Courses",
+        "About Maua": "About Maua",
+        "Here you can find more information about the Maua University": "Here you can find more information about the Maua University",
+        "Provided by Maua University": "Provided by Maua University",
+        "Maua Organisations": "Maua Organisations",
+        "Rector": "Rector",
+        "Vice rector": "Vice rector",
+        "Internal Program": "Internal Program",
+
+        "Maua Courses": "Maua Courses",
+        "Here you can find an overview of the courses at Maua": "Here you can find an overview of the courses at Maua",
+
+        "Maua staff": "Maua staff"
+    }
+}

@@ -3,6 +3,8 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {customStyles} from '../assets/style'
 import SocialmediaButton from '../components/SocialmediaButton';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 
 const LoginPage = ({ navigation }) => {
     const [email, setEmail] = useState('');
@@ -20,6 +22,8 @@ const LoginPage = ({ navigation }) => {
       // Implement your forgot password logic here
       // This can navigate to a password reset screen or send a password reset email
     };
+
+    const {t, i18n} = useTranslation()
   
     return (
       <View style={customStyles.container_center}>
@@ -32,8 +36,8 @@ const LoginPage = ({ navigation }) => {
               style={customStyles.logo_login}
             />
           <View style={customStyles.columntext_login}>
-            <Text style={customStyles.title_login}>Welcome back</Text>
-            <Text style={customStyles.smalltext_login}>Please sign in</Text>
+            <Text style={customStyles.title_login}>{t('Welcome back')}</Text>
+            <Text style={customStyles.smalltext_login}>{t('Please sign in')}</Text>
           </View>      
             <View style={customStyles.underscore_login}>
               <Icon name="envelope" size={20} color="#095DAC" style={customStyles.icon_login} /> 
@@ -48,7 +52,7 @@ const LoginPage = ({ navigation }) => {
               <Icon name="lock" size={30} color="#095DAC" style={customStyles.icon_login} />
               <TextInput
                 style={customStyles.input_login}
-                placeholder="Password"
+                placeholder={t("Password")}
                 secureTextEntry
                 value={password}
                 onChangeText={setPassword}
@@ -62,16 +66,16 @@ const LoginPage = ({ navigation }) => {
                   <Text style={customStyles.checkboxText_login}>x</Text>
                   ) : null}
               </TouchableOpacity>
-            <Text>Remember me</Text>
+            <Text>{t('Remember me')}</Text>
             <TouchableOpacity onPress={handleForgotPassword}>
-              <Text style={customStyles.forgotPassword_login}>Forgot password?</Text>
+              <Text style={customStyles.forgotPassword_login}>{t('Forgot password?')}</Text>
             </TouchableOpacity>
             </View>
             <View style={customStyles.row}>            
               <TouchableOpacity onPress={handleSignIn}
                 style={customStyles.button}
               >
-                <Text style={customStyles.button_text}>Sign in</Text>
+                <Text style={customStyles.button_text}>{t('Sign in')}</Text>
               </TouchableOpacity>              
             </View>
             <View style={customStyles.row}>

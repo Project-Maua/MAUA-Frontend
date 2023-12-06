@@ -9,8 +9,8 @@ import LoginPage from '../pages/LoginPage'
 import SettingsPage from '../pages/SettingsPage'
 import AboutPage from '../pages/AboutPage'
 import CoursesPage from '../pages/CoursePage';
-import OrginisationPage from '../pages/OrginisationPage';
-import StudentOrginisationPage from '../pages/StudentOrginisationPage';
+import OrganisationPage from '../pages/OrganisationPage';
+import StudentOrganisationPage from '../pages/StudentOrganisationPage';
 import NotificationPage from '../pages/NotificationPage';
 import AddNotificationPage from '../pages/AddNotificationPage';
 import { TouchableOpacity} from 'react-native';
@@ -33,8 +33,8 @@ const RouteSystem = () => (
             <Stack.Screen name="Settings"            component={SettingsPage}            />
             <Stack.Screen name="About"               component={AboutPage}               />
             <Stack.Screen name="Courses"             component={CoursesPage}             />
-            <Stack.Screen name="Orginisation"        component={OrginisationPage}        />
-            <Stack.Screen name="StudentOrginisation" component={StudentOrginisationPage} />
+            <Stack.Screen name="Organisation"        component={OrganisationPage}        />
+            <Stack.Screen name="StudentOrganisation" component={StudentOrganisationPage} />
             <Stack.Screen name="Notification"        component={NotificationPage}        />
             <Stack.Screen name="AddNotification"     component={AddNotificationPage}     />
         </Stack.Navigator>

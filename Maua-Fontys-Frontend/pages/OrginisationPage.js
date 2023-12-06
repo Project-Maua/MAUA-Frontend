@@ -3,8 +3,13 @@ import { SafeAreaView, View, ScrollView, Text, Image, TouchableOpacity } from 'r
 import Course from '../components/Course.js';
 import Menu from '../components/Menu';
 import {customStyles} from '../assets/style';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 const cardImage = require('../assets/schoolmaua.jpg');
-const OrginisationPage = ({ navigation }) => {
+const OrganisationPage = ({ navigation }) => {
+
+  const {t, i18n} = useTranslation()
+
     const handleCourses = () => {
         navigation.navigate('Courses')
 
@@ -13,8 +18,8 @@ const OrginisationPage = ({ navigation }) => {
         navigation.navigate('About')
 
     };
-    const handleOrginisation = () => {
-        navigation.navigate('Orginisation')
+    const handleOrganisation = () => {
+        navigation.navigate('Organisation')
 
     };
   const about = [
@@ -90,32 +95,32 @@ const OrginisationPage = ({ navigation }) => {
         <Menu />
         <View style={customStyles.topbar}>
             <TouchableOpacity style={customStyles.button} onPress={handleAbout} >
-                <Text style={customStyles.button_text}>About</Text>
+                <Text style={customStyles.button_text}>{t("About")}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={customStyles.button} onPress={handleCourses}>
-                <Text style={customStyles.button_text}>Courses</Text>
+                <Text style={customStyles.button_text}>{t("Courses")}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button_active} onPress={handleOrginisation}>
-                <Text style={customStyles.button_active_text}>Orginisation</Text>
+            <TouchableOpacity style={customStyles.button_active} onPress={handleOrganisation}>
+                <Text style={customStyles.button_active_text}>{t("Organisation")}</Text>
             </TouchableOpacity>
         </View>
-        <Text style={customStyles.body_text}>About Maua</Text>
+        <Text style={customStyles.body_text}>{t("About Maua")}</Text>
         <View style={customStyles.message_container}>
-          <Text style={customStyles.message_container_title}>Here you can find more information about the Maua University </Text>
-          <Text style={customStyles.message_container_text}>Provided by Maua University</Text>
+          <Text style={customStyles.message_container_title}>{t("Here you can find more information about the Maua University")} </Text>
+          <Text style={customStyles.message_container_text}>{t("Provided by Maua University")}</Text>
         </View>
-        <Text style={customStyles.body_text}>Maua Orginisations</Text>
+        <Text style={customStyles.body_text}>{t("Maua Organisations")}</Text>
         <View style={customStyles.row_two_components}>
             <View style={customStyles.card}>
               <Image source={cardImage} style={customStyles.card_image} />
               <View style={customStyles.card_content}>
-                <Text style={customStyles.card_title}>Rector</Text>
+                <Text style={customStyles.card_title}>{t("Rector")}</Text>
                 <Text style={customStyles.card_message}>...</Text>
                 <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>More info</Text>
+                    <Text style={customStyles.button_text}>{t("More info")}</Text>
                   </TouchableOpacity> 
                 </View>
               </View>
@@ -123,19 +128,19 @@ const OrginisationPage = ({ navigation }) => {
             <View style={customStyles.card}>
               <Image source={cardImage} style={customStyles.card_image} />
               <View style={customStyles.card_content}>
-                <Text style={customStyles.card_title}>Rector</Text>
+                <Text style={customStyles.card_title}>{t("Vice rector")}</Text>
                 <Text style={customStyles.card_message}>...</Text>
                 <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>More info</Text>
+                    <Text style={customStyles.button_text}>{t("More info")}</Text>
                   </TouchableOpacity> 
                 </View>
               </View>
             </View>
           </View>
-        <Text style={customStyles.body_text}>Internal Program</Text>
+        <Text style={customStyles.body_text}>{t("Internal Program")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
                 {about.map((course, index) => (
@@ -150,4 +155,4 @@ const OrginisationPage = ({ navigation }) => {
   );
 };
 
-export default OrginisationPage;
+export default OrganisationPage;

@@ -3,7 +3,12 @@ import { SafeAreaView, View, ScrollView, Text, TouchableOpacity } from 'react-na
 import Course from '../components/Course.js';
 import Menu from '../components/Menu';
 import {customStyles} from '../assets/style';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 const CoursePage = ({navigation}) => {
+
+  const {t, i18n} = useTranslation()
+
     const handleCourses = () => {
         navigation.navigate('Courses')
 
@@ -12,8 +17,8 @@ const CoursePage = ({navigation}) => {
         navigation.navigate('About')
 
     };
-    const handleOrginisation = () => {
-        navigation.navigate('Orginisation')
+    const handleOrganisation = () => {
+        navigation.navigate('Organisation')
 
     };
   const courses = [
@@ -67,21 +72,21 @@ const CoursePage = ({navigation}) => {
         <Menu />
         <View style={customStyles.topbar}>
             <TouchableOpacity style={customStyles.button} onPress={handleAbout} >
-                <Text style={customStyles.button_text}>About</Text>
+                <Text style={customStyles.button_text}>{t("About")}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={customStyles.button_active} onPress={handleCourses}>
-                <Text style={customStyles.button_active_text}>Courses</Text>
+                <Text style={customStyles.button_active_text}>{t("Courses")}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button} onPress={handleOrginisation}>
-                <Text style={customStyles.button_text}>Orginisation</Text>
+            <TouchableOpacity style={customStyles.button} onPress={handleOrganisation}>
+                <Text style={customStyles.button_text}>{t("Organisation")}</Text>
             </TouchableOpacity>
         </View>
-        <Text style={customStyles.body_text}>Maua courses</Text>
+        <Text style={customStyles.body_text}>{t("Maua courses")}</Text>
         <View style={customStyles.message_container}>
-          <Text style={customStyles.message_container_title}>Here you can find an overview of the courses at Maua </Text>
-          <Text style={customStyles.message_container_text}>Provided by Maua University</Text>
+          <Text style={customStyles.message_container_title}>{t("Here you can find an overview of the courses at Maua")}</Text>
+          <Text style={customStyles.message_container_text}>{t("Provided by Maua University")}</Text>
         </View>
-        <Text style={customStyles.body_text}>University activities</Text>
+        <Text style={customStyles.body_text}>{t("University activities")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
                 {courses.map((course, index) => (

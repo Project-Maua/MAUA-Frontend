@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, Linking, TouchableOpacity } from 'react-native';
 // Adicionar essa linha
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import '../utils/i18n'
+import { useTranslation } from 'react-i18next'
 
 const url = 'https://www.google.com/maps/place/Instituto+Mauá+de+Tecnologia/@-23.6480707,-46.5732959,16z/data=!4m6!3m5!1s0x94ce434992a4cad7:0x75aa65b7b5099c2!8m2!3d-23.647955!4d-46.574245!16s%2Fm%2F0nd4yst?ent';
 
@@ -35,33 +37,38 @@ buttonText:{
 },
 });
 
-const GoogleMapsPage = () => (
-   <View style={styles.container}>
-     <MapView
-       provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-       style={styles.map}
-       region={{
-         latitude: -23.647955,
-         longitude:-46.574245,
-         latitudeDelta: 0.015,
-         longitudeDelta: 0.0121,
-       }}
-     >
-         <Marker
-            coordinate={{
-              latitude: -23.647955,
-              longitude:-46.574245,
-            }}
-            title={"Instituto Mauá de Tecnologia"}
-            description={""}
-         />
-     </MapView>
-     
-     <TouchableOpacity style={styles.button} title="Go to Mauá" onPress={() => Linking.openURL(url)}>
-      <Text style={styles.buttonText}>Got to Maua</Text>
-      </TouchableOpacity>
-     
-   </View>
-);
+const GoogleMapsPage = () => {
+
+  const {t, i18n} = useTranslation()
+
+  return(
+    <View style={styles.container}>
+    <MapView
+      provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+      style={styles.map}
+      region={{
+        latitude: -23.647955,
+        longitude:-46.574245,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121,
+      }}
+    >
+        <Marker
+           coordinate={{
+             latitude: -23.647955,
+             longitude:-46.574245,
+           }}
+           title={"Instituto Mauá de Tecnologia"}
+           description={""}
+        />
+    </MapView>
+    
+    <TouchableOpacity style={styles.button} title="Go to Mauá" onPress={() => Linking.openURL(url)}>
+     <Text style={styles.buttonText}>{t("Go to Maua")}</Text>
+     </TouchableOpacity>
+    
+  </View>
+  )
+};
 
 export default GoogleMapsPage

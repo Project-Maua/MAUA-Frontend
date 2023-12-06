@@ -1,0 +1,46 @@
+{
+    "translation": {
+        "Welcome back": "Bem vindo",
+        "Please sign in" : "Por favor entre com sua conta",
+        "Remember me" : "Lembre-se de mim",
+        "Forgot password?": "Esqueceu sua senha?",
+        "Sign in": "Entrar",
+        "Password": "Senha",
+
+        "Language": "Idioma",
+        "Switch mode": "Alterar modo",
+        "About": "Sobre",
+        "Logout": "Sair",
+
+        "University of Technology Maua": "Instituto Mauá de Tecnologia",
+        "6th of February | Tuesday": "6 de Fevereiro | Terça-Feira",
+        "Location Maua Building A": "Localização Mauá Bloco A",
+        "Maua activities": "Atividades Mauá",
+        "Welcome!": "Bem vindo!",
+        "This is a sample card box in React Native.": "Este é um exemplo de card box em React Native.",
+        "More info": "Sobre",
+
+        "University Activities": "Atividades da Universidade",
+        "Tracking": "Trilha",
+        
+        "Go to Maua": "Ir para Mauá",
+
+        "Student organisations of Maua": "Organizações Estudantis da Mauá",
+        "Organisations": "Organizações",
+
+        "Courses": "Cursos",
+        "About Maua": "Sobre a Mauá",
+        "Here you can find more information about the Maua University": "Aqui você pode encontrar mais informações sobre a Mauá",
+        "Provided by Maua University": "Providenciado pela Universidade Mauá",
+        "Maua Organisations": "Organizações da Mauá",
+        "Rector": "Reitor",
+        "Vice rector": "Vice-reitor",
+        "Internal Program": "Programas Internos",
+
+        "Maua Courses": "Cursos da Mauá",
+        "Here you can find an overview of the courses at Maua": "Aqui você pode encontrar mais informações sobre os cursos da Mauá",
+
+        "Maua staff": "Corpo Administrativo"
+
+    }
+}

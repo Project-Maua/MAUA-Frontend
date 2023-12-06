@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
-import Menu from '../components/Menu';
+import {customStyles} from '../assets/style';
   const title = "Welcome!";
   const message = "This is a sample card box in React Native.";
   const cardImage = require('../assets/schoolmaua.jpg');
@@ -9,50 +9,49 @@ import Menu from '../components/Menu';
 const HomePage = ({ navigation }) => {
 
   const handleAgenda = () => {
-    //Navigation test:
     navigation.navigate('Agenda')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleActivity = () => {
-    //Navigation test:
     navigation.navigate('Activity')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleCampusMaps = () => {
-    //Navigation test:
     navigation.navigate('CampusMaps')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleGoogleMaps = () => {
-    //Navigation test:
     navigation.navigate('GoogleMaps')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleInformations = () => {
-    //Navigation test:
     navigation.navigate('About')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleStudentOrginisation = () => {
-    //Navigation test:
     navigation.navigate('StudentOrginisation')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
   };
   const handleNotification = () => {
-    //Navigation test:
     navigation.navigate('Notification')
+
+    // Implement your login logic here
+    // Typically, you would make an API call to authenticate the user
+  };
+  const handleSettings = () => {
+    navigation.navigate('Settings')
 
     // Implement your login logic here
     // Typically, you would make an API call to authenticate the user
@@ -62,98 +61,96 @@ const HomePage = ({ navigation }) => {
     <SafeAreaView>
     <ScrollView>
     <View>
-      <View style={""}>
-      <View style={styles.header}>
-            <TouchableOpacity style={styles.icon}>
-                <Icon name="bars" size={25} color="#095DAC"/>
-            </TouchableOpacity>
-            <Image
-                    source={require('../assets/logo-maua.png')} 
-                    style={styles.logo}
-                />
-            <TouchableOpacity style={styles.icon} onPress={handleNotification}>
-                <Icon name="bell" size={25} color="#095DAC" />
-            </TouchableOpacity>
-    </View>
-        <View style={styles.imageContainer}>
-          <Image source={headerImage} style={styles.headerImage} />
-          <View style={styles.overlay}>
-            <Text style={styles.text}>University of Technology Maua</Text>
+      <View>
+        <View style={customStyles.menu}>
+              <TouchableOpacity style={customStyles.menu_icon} onPress={handleSettings}>
+                  <Icon name="bars" size={25} color="#095DAC"/>
+              </TouchableOpacity>
+              <Image
+                      source={require('../assets/logo-maua.png')} 
+                      style={customStyles.menu_logo}
+                  />
+              <TouchableOpacity style={customStyles.menu_icon} onPress={handleNotification}>
+                  <Icon name="bell" size={25} color="#095DAC" />
+              </TouchableOpacity>
+        </View>
+        <View style={customStyles.header_container}>
+          <Image source={headerImage} style={customStyles.header_image} />
+          <View style={customStyles.overlay_gray}>
+            <Text style={customStyles.header_text}>University of Technology Maua</Text>
           </View>
         </View>
-        <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.containerbutton} onPress={handleAgenda} >
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="calendar" size={25} color="white" style={styles.buttonIcon} />
+        <View style={customStyles.grid_container}>
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleAgenda} >
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="calendar" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton} onPress={handleCampusMaps}>
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="graduation-cap" size={25} color="white" style={styles.buttonIcon} />
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleCampusMaps}>
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="graduation-cap" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton} onPress={handleGoogleMaps}>
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="compass" size={25} color="white" style={styles.buttonIcon} />
-              </View>
-            </TouchableOpacity>
-        </View>
-        <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.containerbutton} onPress={handleActivity}>
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="play" size={25} color="white" style={styles.buttonIcon} />
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton} onPress={handleStudentOrginisation}>
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="users" size={25} color="white" style={styles.buttonIcon} />
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbutton} onPress={handleInformations}>
-              <Image source={cardImage} style={styles.containerImage}></Image>
-              <View style={styles.overlay}>
-                <Icon name="info-circle" type="font-awesome" size={25} color="white" style={styles.buttonIcon} />
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleGoogleMaps}>
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="compass" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
         </View>
-        <View style={""}>
-          <Text style={styles.textbetween}>Agenda</Text>
-          <View style={styles.agendaMessageContainer}>
-            <Text style={styles.agendaMessage}>6th of Februari | Tuesday </Text>
-            <Text style={styles.agendaSmallerMessage}>Location Maua Building A</Text>
+        <View style={customStyles.grid_container}>
+        <TouchableOpacity style={customStyles.grid_button} onPress={handleActivity}>
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="play" size={25} color="white" style={customStyles.grid_button_icon} />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleStudentOrginisation}>
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="users" size={25} color="white" style={customStyles.grid_button_icon} />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleInformations}>
+              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <View style={customStyles.overlay_gray}>
+                <Icon name="info-circle" type="font-awesome" size={25} color="white" style={customStyles.grid_button_icon} />
+              </View>
+            </TouchableOpacity>
+        </View>
+          <Text style={customStyles.body_text}>Agenda</Text>
+          <View style={customStyles.message_container}>
+            <Text style={customStyles.message_container_title}>6th of Februari | Tuesday </Text>
+            <Text style={customStyles.message_container_text}>Location Maua Building A</Text>
           </View>
-        </View>
-        <Text style={styles.textbetween}>Maua activities</Text>
-        <View style={styles.row}>
-            <View style={styles.card}>
-              <Image source={cardImage} style={styles.cardImage} />
-              <View style={styles.content}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.message}>{message}</Text>
-                <View style={styles.containeritem}>            
+        <Text style={customStyles.body_text}>Maua activities</Text>
+        <View style={customStyles.row}>
+            <View style={customStyles.card}>
+              <Image source={cardImage} style={customStyles.card_image} />
+              <View style={customStyles.card_content}>
+                <Text style={customStyles.card_title}>{title}</Text>
+                <Text style={customStyles.card_message}>{message}</Text>
+                <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
-                    style={styles.button}
+                    style={customStyles.button}
                   >
-                    <Text style={styles.buttonText}>More info</Text>
+                    <Text style={customStyles.button_text}>More info</Text>
                   </TouchableOpacity> 
                 </View>
               </View>
             </View>
-            <View style={styles.card}>
-              <Image source={cardImage} style={styles.cardImage} />
-              <View style={styles.content}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.message}>{message}</Text>
-                <View style={styles.containeritem}>            
+            <View style={customStyles.card}>
+              <Image source={cardImage} style={customStyles.card_image} />
+              <View style={customStyles.card_content}>
+                <Text style={customStyles.card_title}>{title}</Text>
+                <Text style={customStyles.card_message}>{message}</Text>
+                <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
-                    style={styles.button}
+                    style={customStyles.button}
                   >
-                    <Text style={styles.buttonText}>More info</Text>
+                    <Text style={customStyles.button_text}>More info</Text>
                   </TouchableOpacity> 
                 </View>
               </View>
@@ -165,164 +162,6 @@ const HomePage = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  //Menu
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    paddingHorizontal: 20,
-    paddingTop: 40,
-    paddingBottom: 10,
-  },
-  icon: {
-      padding: 5,
-  },
-  logo: {
-  width: 90, 
-  height: 40,
-},
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  headerImage: {
-    width: '97%',
-    height: 170,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    resizeMode: 'cover',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(60, 60, 60, 0.2)', 
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-    width: '97%',
-  },
-  imageContainer: {
-    position: 'relative',
-    height: 170,
-    marginBottom: 10, 
-  },
-  image: {
-    width: '100%',
-    height: '100%',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
-  },
-  card: {
-    width: "47%",
-    backgroundColor: 'lightgrey',
-    borderRadius: 10,
-    margin: 5,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  cardImage: {
-    width: '100%',
-    height: 120,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    resizeMode: 'cover',
-  },
-  content: {
-    padding: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  textbetween: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    marginLeft: 15,
-  },
-  message: {
-    fontSize: 16,
-  },
-  //Agendacontainer
-  agendaSmallerMessage: {
-    color: 'white',
-    textAlign: 'left',
-    marginLeft: 15,
-    fontSize: 16,
-    marginTop: 15,
-  },
-  agendaMessage: {
-    color: 'white',
-    textAlign: 'left',
-    marginLeft: 15,
-    marginTop: 15,
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-  agendaMessageContainer: {
-    backgroundColor: '#095DAC',
-    height: 120,
-    width: '97%',
-    borderRadius: 10,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  //Button
-  button: {
-    backgroundColor: '#095DAC',
-    color: '#095DAC',
-    height: 40,
-    width: 100,
-    borderRadius: 20,
-    marginTop: 20,
-  },
-  buttonText:{
-    color: 'white',
-    textAlign: 'center',
-    marginTop: 'auto',
-    marginBottom: 'auto',
-    fontSize: 16,
-  },
-  //buttongrid
-  buttonContainer:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 15,
-    marginLeft: 15,
-    marginRight: 15,
-  },
-  containerbutton:{
-    backgroundColor: 'grey',
-    width: '30%',
-    height: 100,
-    borderRadius: 10,
-  },
-  containerImage: {
-    resizeMode: 'cover',
-    height: 100,
-    width: 'auto',
-    opacity: 0.8,
-    borderRadius: 10
-  },
-  buttonIcon:{
-
-  }
-});
 
 export default HomePage;
 

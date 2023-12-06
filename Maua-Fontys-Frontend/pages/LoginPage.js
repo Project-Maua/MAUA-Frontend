@@ -10,7 +10,6 @@ const LoginPage = ({ navigation }) => {
     const [rememberMe, setRememberMe] = useState(false);
   
     const handleSignIn = () => {
-      //Navigation test:
       navigation.navigate('Home')
 
       // Implement your login logic here
@@ -23,68 +22,63 @@ const LoginPage = ({ navigation }) => {
     };
   
     return (
-      <View style={customStyles.container}>
-        {/* Header */}
-      <View style={customStyles.header}>
-      </View>
-        {/* Body */}
+      <View style={customStyles.container_center}>
+        <View style={customStyles.header_login}>
+        </View>
         <View style={customStyles.body}>
-          {/* Column */}
-          <View style={customStyles.column}>
+          <View style={customStyles.column_login}>
             <Image
               source={require('../assets/logo-maua.png')} 
-              style={customStyles.logo}
+              style={customStyles.logo_login}
             />
-          <View style={customStyles.columntext}>
-            <Text style={customStyles.Title}>Welcome back</Text>
-            <Text style={customStyles.smalltext}>Please sign in</Text>
+          <View style={customStyles.columntext_login}>
+            <Text style={customStyles.title_login}>Welcome back</Text>
+            <Text style={customStyles.smalltext_login}>Please sign in</Text>
           </View>      
-            <View style={customStyles.underscore}>
-              <Icon name="envelope" size={20} color="#095DAC" style={customStyles.icon} /> 
+            <View style={customStyles.underscore_login}>
+              <Icon name="envelope" size={20} color="#095DAC" style={customStyles.icon_login} /> 
               <TextInput
-                style={customStyles.input}
+                style={customStyles.input_login}
                 value={email}
                 onChangeText={(text) => setEmail(text)}
                 placeholder="Email@maua.br"
               /> 
             </View>
-            <View style={customStyles.underscore}>
-              <Icon name="lock" size={30} color="#095DAC" style={customStyles.icon} />
+            <View style={customStyles.underscore_login}>
+              <Icon name="lock" size={30} color="#095DAC" style={customStyles.icon_login} />
               <TextInput
-                style={customStyles.input}
+                style={customStyles.input_login}
                 placeholder="Password"
                 secureTextEntry
                 value={password}
                 onChangeText={setPassword}
               />
             </View>  
-            <View style={customStyles.checkboxContainer}>
+            <View style={customStyles.checkboxContainer_login}>
               <TouchableOpacity
                   onPress={() => setRememberMe(!rememberMe)}
-                  style={customStyles.checkbox}>
+                  style={customStyles.checkbox_login}>
                   {rememberMe ? (
-                  <Text style={customStyles.checkboxText}>x</Text>
+                  <Text style={customStyles.checkboxText_login}>x</Text>
                   ) : null}
               </TouchableOpacity>
             <Text>Remember me</Text>
             <TouchableOpacity onPress={handleForgotPassword}>
-              <Text style={customStyles.forgotPassword}>Forgot password?</Text>
+              <Text style={customStyles.forgotPassword_login}>Forgot password?</Text>
             </TouchableOpacity>
             </View>
-            <View style={customStyles.containeritem}>            
+            <View style={customStyles.row}>            
               <TouchableOpacity onPress={handleSignIn}
                 style={customStyles.button}
               >
-                <Text style={customStyles.buttonText}>Sign in</Text>
+                <Text style={customStyles.button_text}>Sign in</Text>
               </TouchableOpacity>              
             </View>
-            <View style={customStyles.containeritem}>
+            <View style={customStyles.row}>
               <SocialmediaButton  icon='facebook'/>
               <SocialmediaButton  icon='whatsapp'/>
               <SocialmediaButton  icon='instagram'/>
             </View>
-          </View>
-          <View style={customStyles.footer}>
           </View>
         </View>
       </View>

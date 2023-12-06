@@ -1,33 +1,13 @@
 import {StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {customStyles} from '../assets/style';
 
 const SocialmediaButton = ({icon}) => {
     return (
-        <TouchableOpacity style={styles.socialmediabutton}>
-            <Icon name={icon} size={30} style={styles.socialmediaicon}/>
+        <TouchableOpacity style={customStyles.socialmedia_button}>
+            <Icon name={icon} size={30} style={customStyles.socialmedia_icon}/>
         </TouchableOpacity>
     )
 }
-
-const styles = StyleSheet.create({
-    socialmediabutton:{
-        backgroundColor: '#095DAC',
-        borderRadius: 30,
-        width: 50,
-        height: 50,
-        margin: 5,
-      },
-    buttonText: {
-      color: 'white',
-      fontWeight: 'bold',
-    },
-    socialmediaicon:{
-        marginTop: 'auto',
-        marginBottom: 'auto',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-      },
-});
 
 export default SocialmediaButton

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Menu from '../components/Menu';
 import Notifications from '../components/Notifications';
-
+import {customStyles} from '../assets/style';
 const NotificationPage = () => {
 
     const notifications = [
@@ -27,14 +27,13 @@ const NotificationPage = () => {
             <ScrollView>
                 <View>
                     <Menu>
-
                     </Menu>
-                    <Text style={styles.textbetween}>Notifications info</Text>
-                    <View style={styles.agendaMessageContainer}>
-                        <Text style={styles.agendaMessage}>What can you find?</Text>
-                        <Text style={styles.agendaSmallerMessage}>Here you can find you latest notifications.</Text>
+                    <Text style={customStyles.body_text}>Notifications info</Text>
+                    <View style={customStyles.message_container}>
+                        <Text style={customStyles.message_container_title}>What can you find?</Text>
+                        <Text style={customStyles.message_container_text}>Here you can find you latest notifications.</Text>
                     </View>
-                    <Text style={styles.textbetween}>Notifications</Text>
+                    <Text style={customStyles.body_text}>Notifications</Text>
                     <View>
                         {notifications.map((notification, index) => (
                             <Notifications key={index} notification={notification} />
@@ -45,38 +44,5 @@ const NotificationPage = () => {
         </SafeAreaView>
     );
 };
-
-const styles = StyleSheet.create({
-    textbetween: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 10,
-        marginLeft: 15,
-    },
-    //Agendacontainer
-  agendaSmallerMessage: {
-    color: 'white',
-    textAlign: 'left',
-    marginLeft: 15,
-    fontSize: 16,
-    marginTop: 15,
-  },
-  agendaMessage: {
-    color: 'white',
-    textAlign: 'left',
-    marginLeft: 15,
-    marginTop: 15,
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-  agendaMessageContainer: {
-    backgroundColor: '#095DAC',
-    height: 120,
-    width: '97%',
-    borderRadius: 10,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-});
 
 export default NotificationPage;

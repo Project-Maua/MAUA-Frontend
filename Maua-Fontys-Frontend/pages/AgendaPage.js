@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, Button, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Button, SafeAreaView } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
+import {customStyles} from '../assets/style';
 import Menu from '../components/Menu';
 
 const AgendaPage = () => {
@@ -48,21 +49,8 @@ const AgendaPage = () => {
         'subscribed': 'False',
         'description': 'Students throw ... rockets... with water.'
       }
-    ]
-
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false);
+    ]  
   
-    const handleLogin = () => {
-      // Implement your login logic here
-      // Typically, you would make an API call to authenticate the user
-    };
-  
-    const handleForgotPassword = () => {
-      // Implement your forgot password logic here
-      // This can navigate to a password reset screen or send a password reset email
-    };
     const getActivities = async () => {
       try {
         const response = await fetch('https://reactnative.dev/movies.json',{
@@ -84,69 +72,26 @@ const AgendaPage = () => {
     }, []);
     console.log(data)
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView style={customStyles.body_background_agendapage}>
         <Menu></Menu>
       
-      <View style={styles.agendaContainer}>
-        {/* Replace the Button with the Calendar component */}
-        <Calendar style={styles.agenda}
-          // You can customize the calendar props here
+      <View style={customStyles.agenda_container}>
+        <Calendar style={customStyles.agenda}
           onDayPress={(day) => {
-            // Handle day press event
             console.log('Selected day', day);
           }}
         />
       </View>
-      <View style={styles.containerBackground}>
-      <ScrollView contentContainerStyle={styles.container}>
-        <Text>University Activities</Text>
-        <View style={styles.activityContainer}>
+      <ScrollView contentContainerStyle={customStyles.agenda_activity_container}>
+      <Text style={customStyles.body_text}>University activities</Text>
+        <View style={""}>
           {activities.map((activity, index) => (
             <Activity key={index} activity={activity} />
           ))}
         </View>
       </ScrollView>
-      </View>
     </SafeAreaView>
-
-
-    );
+   );
   };
   
-  const styles = StyleSheet.create({
-    agendaContainer: {
-      backgroundColor: '#095dac',
-      padding: 20
-    },
-    agenda: {
-      borderRadius: 20,
-      padding: 10
-    },
-    safeArea: {
-      backgroundColor: '#095dac'
-    },
-    container: {
-      flexGrow: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingVertical: 20,
-       // Adjust as needed
-       borderRadius: 20,
-       backgroundColor: '#fff'
-    },
-    buttonContainer: {
-      display: 'flex',
-      padding: 'auto',
-      flexDirection: 'row',
-      padding: 20
-    },
-    safeArea: {
-      flex: 1,
-    },
-    header: {
-      padding: 15,
-      alignItems: 'center',
-    },
-  });
-
 export default AgendaPage;

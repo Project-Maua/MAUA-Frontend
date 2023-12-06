@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import {customStyles} from '../assets/style';
 
 const Notifications = (props) => {
   const [notification] = useState(props.notification);
@@ -12,8 +13,8 @@ const Notifications = (props) => {
     <View style={styles.content}>
         <Text style={styles.title}>{notification.title}</Text>
         <Text style={styles.message}>{notification.description}</Text>
-        <TouchableOpacity onPress={handleButtonPress} style={styles.button}>
-            <Text style={styles.buttonText}>More info</Text>
+        <TouchableOpacity onPress={handleButtonPress} style={customStyles.button}>
+            <Text style={customStyles.button_text}>More info</Text>
         </TouchableOpacity>
     </View>
 </View>
@@ -21,11 +22,6 @@ const Notifications = (props) => {
   );
 }
 const styles = StyleSheet.create({
-  text: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      color: 'white',
-  },
   card: {
       backgroundColor: 'lightgrey',
       borderRadius: 10,
@@ -47,31 +43,11 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       marginBottom: 10,
   },
-  textbetween: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      marginBottom: 10,
-      marginLeft: 15,
-  },
+
   message: {
       fontSize: 16,
   },
-  //Button
-  button: {
-      backgroundColor: '#095DAC',
-      color: '#095DAC',
-      height: 40,
-      width: 100,
-      borderRadius: 20,
-      marginTop: 20,
-  },
-  buttonText: {
-      color: 'white',
-      textAlign: 'center',
-      marginTop: 'auto',
-      marginBottom: 'auto',
-      fontSize: 16,
-  },
+  
 });
 
 export default Notifications;

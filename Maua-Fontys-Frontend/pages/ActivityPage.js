@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, Image, TouchableOpacity, Icon } from 'react-native';
 import Activity from '../components/Activity.js';
 import {customStyles} from '../assets/style';
-import Menu from '../components/Menu.js';
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
@@ -81,7 +80,7 @@ const ActivityPage = ({}) => {
   return (
   <ScrollView>
     <View>
-        <Menu></Menu>
+
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>

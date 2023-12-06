@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import Course from '../components/Course.js';
-import Menu from '../components/Menu';
+
 import {customStyles} from '../assets/style';
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
@@ -69,7 +69,7 @@ const CoursePage = ({navigation}) => {
     <ScrollView>
     <View>
       <View style={""}>
-        <Menu />
+        
         <View style={customStyles.topbar}>
             <TouchableOpacity style={customStyles.button} onPress={handleAbout} >
                 <Text style={customStyles.button_text}>{t("About")}</Text>

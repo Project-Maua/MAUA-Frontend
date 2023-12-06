@@ -52,18 +52,6 @@ const HomePage = ({ navigation }) => {
     <ScrollView>
     <View>
       <View>
-        <View style={customStyles.menu}>
-              <TouchableOpacity style={customStyles.menu_icon} onPress={handleSettings}>
-                  <Icon name="bars" size={25} color="#095DAC"/>
-              </TouchableOpacity>
-              <Image
-                      source={require('../assets/logo-maua.png')} 
-                      style={customStyles.menu_logo}
-                  />
-              <TouchableOpacity style={customStyles.menu_icon} onPress={handleNotification}>
-                  <Icon name="bell" size={25} color="#095DAC" />
-              </TouchableOpacity>
-        </View>
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>

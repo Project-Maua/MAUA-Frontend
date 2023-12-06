@@ -26,8 +26,7 @@ const NotificationPage = () => {
         <SafeAreaView>
             <ScrollView>
                 <View>
-                    <Menu>
-                    </Menu>
+
                     <Text style={customStyles.body_text}>Notifications info</Text>
                     <View style={customStyles.message_container}>
                         <Text style={customStyles.message_container_title}>What can you find?</Text>

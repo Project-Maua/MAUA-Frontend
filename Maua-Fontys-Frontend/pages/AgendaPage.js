@@ -3,7 +3,7 @@ import { View, Text, ScrollView, Button, SafeAreaView } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Activity from '../components/Activity';
 import {customStyles} from '../assets/style';
-import Menu from '../components/Menu';
+
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
@@ -78,7 +78,7 @@ const AgendaPage = () => {
     console.log(data)
     return (
       <SafeAreaView style={customStyles.body_background_agendapage}>
-        <Menu></Menu>
+
       <View style={customStyles.agenda_container}>
         <Calendar style={customStyles.agenda}
           onDayPress={(day) => {

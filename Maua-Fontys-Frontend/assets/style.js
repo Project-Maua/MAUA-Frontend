@@ -168,23 +168,6 @@ export const customStyles = StyleSheet.create({
     forgotPassword_login: {
       marginLeft: 70,
     },
-    //Menu
-    menu: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      backgroundColor: 'white',
-      paddingHorizontal: 20,
-      paddingTop: 40,
-      paddingBottom: 10,
-    },
-    menu_icon: {
-      padding: 5,
-    },
-    menu_logo: {
-      width: 90, 
-      height: 40,
-  },
   //Image header
   header_container: {
     position: 'relative',

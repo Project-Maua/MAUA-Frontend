@@ -3,6 +3,8 @@ import { SafeAreaView, View, ScrollView, Text, Image, TouchableOpacity } from 'r
 import Course from '../components/Course.js';
 import Menu from '../components/Menu';
 import {customStyles} from '../assets/style';
+
+
 const cardImage = require('../assets/schoolmaua.jpg');
 const AboutPage = ({navigation}) => {
     const handleCourses = () => {

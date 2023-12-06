@@ -10,34 +10,19 @@ const HomePage = ({ navigation }) => {
 
   const handleAgenda = () => {
     navigation.navigate('Agenda')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
   };
   const handleActivity = () => {
     navigation.navigate('Activity')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
   };
   const handleCampusMaps = () => {
     navigation.navigate('CampusMaps')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
   };
   const handleGoogleMaps = () => {
     navigation.navigate('GoogleMaps')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
   };
   const handleInformations = () => {
     navigation.navigate('About')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
-  };
+  }
   const handleStudentOrginisation = () => {
     navigation.navigate('StudentOrginisation')
 

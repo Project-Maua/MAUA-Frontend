@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
-import Menu from '../components/Menu';
+
 import Notifications from '../components/Notifications';
 import {customStyles} from '../assets/style';
 const NotificationPage = () => {

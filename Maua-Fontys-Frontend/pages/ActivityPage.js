@@ -3,6 +3,7 @@ import { SafeAreaView, View, ScrollView, Text, Image, TouchableOpacity, Icon } f
 import Activity from '../components/Activity.js';
 import {customStyles} from '../assets/style';
 import Menu from '../components/Menu.js';
+
 const headerImage = require('../assets/schoolmaua.jpg');
 const title = "Welcome!";
 const message = "This is a sample card box in React Native.";

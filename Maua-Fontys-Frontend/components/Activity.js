@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, Button, ScrollView, TouchableOpacity } from 'react-native';
 import {customStyles} from '../assets/style';
+
   const cardImage = require('../assets/schoolmaua.jpg');
 const Activity = (props) => {
     const [activity, setActivity] = useState(props.activity)

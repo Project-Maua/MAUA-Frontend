@@ -5,6 +5,8 @@ import Activity from '../components/Activity';
 import {customStyles} from '../assets/style';
 import Menu from '../components/Menu';
 
+
+
 const AgendaPage = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -74,7 +76,6 @@ const AgendaPage = () => {
     return (
       <SafeAreaView style={customStyles.body_background_agendapage}>
         <Menu></Menu>
-      
       <View style={customStyles.agenda_container}>
         <Calendar style={customStyles.agenda}
           onDayPress={(day) => {

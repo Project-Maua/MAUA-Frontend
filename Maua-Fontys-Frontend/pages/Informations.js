@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Course from '../components/Course.js';
-import Menu from '../components/Menu';
+
 const cardImage = require('../assets/schoolmaua.jpg');
 
 const courses = [

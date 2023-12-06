@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import {customStyles} from '../assets/style';
 
 const cardImage = require('../assets/schoolmaua.jpg');
+
 const StudentOrginisation = (props) => {
     const [StudentOrg, setStudentOrginisation] = useState(props.StudentOrginisation)
 

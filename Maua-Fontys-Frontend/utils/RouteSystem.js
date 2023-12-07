@@ -15,6 +15,7 @@ import { HeaderButtons } from 'react-navigation-header-buttons'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import MauaLogo from '../components/MauaLogo'
 import MenuACOPage from '../pages/MenuAboutCoursesOrganizations'
+import MoreInfoPage from '../pages/MoreInfoPage'
 
 const Stack = createNativeStackNavigator()
 
@@ -33,6 +34,7 @@ const RouteSystem = () => (
             <Stack.Screen name="Notification"        component={NotificationPage}        />
             <Stack.Screen name="AddNotification"     component={AddNotificationPage}     />
             <Stack.Screen name="MenuACOPage"         component={MenuACOPage}             />
+            <Stack.Screen name="MoreInfo"            component={MoreInfoPage}            />
         </Stack.Navigator>
     </NavigationContainer>
 )

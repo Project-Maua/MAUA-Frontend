@@ -10,16 +10,16 @@ const MoreInfoPage = ({route}) => {
             <View style={customStyles.card_content}>
                 <Text style={customStyles.card_title}>{info.name}</Text>
 
-                <Text style={customStyles.card_title}>{'duration:'}</Text>
+                <Text style={customStyles.card_subtitle}>{'duration:'}</Text>
                 <Text style={customStyles.card_message}>{info.duration}</Text>
 
-                <Text style={customStyles.card_title}>{'tuition:'}</Text>
+                <Text style={customStyles.card_subtitle}>{'tuition:'}</Text>
                 <Text style={customStyles.card_message}>{info.tuition}</Text>
 
-                <Text style={customStyles.card_title}>{'shift:'}</Text>
+                <Text style={customStyles.card_subtitle}>{'shift:'}</Text>
                 <Text style={customStyles.card_message}>{info.shift}</Text>
 
-                <Text style={customStyles.card_title}>{'description:'}</Text>
+                <Text style={customStyles.card_subtitle}>{'description:'}</Text>
                 <Text style={customStyles.card_message}>{info.description}</Text>
             </View>
         </ScrollView>

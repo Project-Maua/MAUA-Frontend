@@ -307,6 +307,10 @@ export const customStyles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
+  card_subtitle: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
   card_message: {
     fontSize: 16,
   },

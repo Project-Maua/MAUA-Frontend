@@ -26,7 +26,7 @@ const HomePage = ({ navigation }) => {
     navigation.navigate('GoogleMaps')
   };
   const handleInformations = () => {
-    navigation.navigate('About')
+    navigation.navigate('MenuACOPage')
   }
   const handleStudentOrganisation = () => {
     navigation.navigate('StudentOrganisation')

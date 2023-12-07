@@ -1,27 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {View, ScrollView, Text, TouchableOpacity } from 'react-native';
+import {View, ScrollView, Text } from 'react-native';
 import Course from '../components/Course.js';
 import {customStyles} from '../assets/style';
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 import Constants from '../utils/Constants.js';
-const CoursePage = ({navigation}) => {
 
+const CoursePage = () => {
   const {t, i18n} = useTranslation()
-
-    const handleCourses = () => {
-        navigation.navigate('Courses')
-
-    };
-    const handleAbout = () => {
-        navigation.navigate('About')
-
-    };
-    const handleOrganisation = () => {
-        navigation.navigate('Organisation')
-
-    };
-
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -45,22 +31,11 @@ const CoursePage = ({navigation}) => {
   useEffect(() => {
     getActivities();
   }, []);
+
   return (
     <ScrollView>
     <View>
       <View style={""}>
-        
-        <View style={customStyles.topbar}>
-            <TouchableOpacity style={customStyles.button} onPress={handleAbout} >
-                <Text style={customStyles.button_text}>{t("About")}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button_active} onPress={handleCourses}>
-                <Text style={customStyles.button_active_text}>{t("Courses")}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button} onPress={handleOrganisation}>
-                <Text style={customStyles.button_text}>{t("Organisation")}</Text>
-            </TouchableOpacity>
-        </View>
         <Text style={customStyles.body_text}>{t("Maua courses")}</Text>
         <View style={customStyles.message_container}>
           <Text style={customStyles.message_container_title}>{t("Here you can find an overview of the courses at Maua")}</Text>

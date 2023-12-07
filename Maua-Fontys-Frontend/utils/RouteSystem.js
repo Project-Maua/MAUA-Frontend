@@ -7,9 +7,6 @@ import GoogleMapsPage from '../pages/GoogleMapsPage'
 import HomePage from '../pages/HomePage'
 import LoginPage from '../pages/LoginPage'
 import SettingsPage from '../pages/SettingsPage'
-import AboutPage from '../pages/AboutPage'
-import CoursesPage from '../pages/CoursePage';
-import OrganisationPage from '../pages/OrganisationPage';
 import StudentOrganisationPage from '../pages/StudentOrganisationPage';
 import NotificationPage from '../pages/NotificationPage';
 import AddNotificationPage from '../pages/AddNotificationPage';
@@ -17,6 +14,7 @@ import { TouchableOpacity} from 'react-native';
 import { HeaderButtons } from 'react-navigation-header-buttons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MauaLogo from '../components/MauaLogo'
+import MenuACOPage from '../pages/MenuAboutCoursesOrganizations'
 
 const Stack = createNativeStackNavigator();
 
@@ -31,12 +29,10 @@ const RouteSystem = () => (
             <Stack.Screen name="GoogleMaps"          component={GoogleMapsPage}          />
             <Stack.Screen name="Home"                component={HomePage}                />
             <Stack.Screen name="Settings"            component={SettingsPage}            />
-            <Stack.Screen name="About"               component={AboutPage}               />
-            <Stack.Screen name="Courses"             component={CoursesPage}             />
-            <Stack.Screen name="Organisation"        component={OrganisationPage}        />
             <Stack.Screen name="StudentOrganisation" component={StudentOrganisationPage} />
             <Stack.Screen name="Notification"        component={NotificationPage}        />
             <Stack.Screen name="AddNotification"     component={AddNotificationPage}     />
+            <Stack.Screen name="MenuACOPage"         component={MenuACOPage}             />
         </Stack.Navigator>
     </NavigationContainer>
 )

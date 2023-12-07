@@ -7,23 +7,9 @@ import { useTranslation } from 'react-i18next'
 import Constants from '../utils/Constants.js'
 
 const cardImage = require('../assets/schoolmaua.jpg')
-const OrganisationPage = ({ navigation }) => {
 
+const OrganisationPage = () => {
   const {t, i18n} = useTranslation()
-
-    const handleCourses = () => {
-        navigation.navigate('Courses')
-
-    };
-    const handleAbout = () => {
-        navigation.navigate('About')
-
-    };
-    const handleOrganisation = () => {
-        navigation.navigate('Organisation')
-
-    };
-
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -51,23 +37,6 @@ const OrganisationPage = ({ navigation }) => {
     <ScrollView>
     <View>
       <View style={""}>
-        
-        <View style={customStyles.topbar}>
-            <TouchableOpacity style={customStyles.button} onPress={handleAbout} >
-                <Text style={customStyles.button_text}>{t("About")}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button} onPress={handleCourses}>
-                <Text style={customStyles.button_text}>{t("Courses")}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={customStyles.button_active} onPress={handleOrganisation}>
-                <Text style={customStyles.button_active_text}>{t("Organisation")}</Text>
-            </TouchableOpacity>
-        </View>
-        <Text style={customStyles.body_text}>{t("About Maua")}</Text>
-        <View style={customStyles.message_container}>
-          <Text style={customStyles.message_container_title}>{t("Here you can find more information about the Maua University")} </Text>
-          <Text style={customStyles.message_container_text}>{t("Provided by Maua University")}</Text>
-        </View>
         <Text style={customStyles.body_text}>{t("Maua Organisations")}</Text>
         <View style={customStyles.row_two_components}>
             <View style={customStyles.card}>

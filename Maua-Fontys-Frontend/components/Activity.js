@@ -11,10 +11,8 @@ const Activity = (props) => {
       <Image source={{uri: activity.image}} style={customStyles.card_image} />
         <View style={customStyles.card_content}>
             <Text style={customStyles.card_title}>{activity.name}</Text>
-            <Text style={customStyles.card_message}>{activity.description}</Text>
-            <Text style={customStyles.card_message}>{activity.startTime}</Text>
-            <Text style={customStyles.card_message}>{activity.endTime}</Text>
-            <Text style={customStyles.card_message}>{activity.location}</Text>
+            <Text style={customStyles.card_message}>{activity.startTime.substring(0, 16)}</Text>
+            <Text style={customStyles.card_message}>{activity.description.substr(0, 50) + '...'}</Text>
               <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}

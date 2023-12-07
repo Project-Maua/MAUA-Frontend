@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
+import Constants from '../utils/Constants'
 
   const title = "Welcome!"
   const message = "This is a sample card box in React Native."
@@ -38,7 +39,7 @@ const HomePage = ({ navigation }) => {
     <View>
       <View>
         <View style={customStyles.header_container}>
-          <Image source={headerImage} style={customStyles.header_image} />
+          <Image source={{uri: Constants.mauaImage}} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>
             <Text style={customStyles.header_text}>{t("University of Technology Maua")}</Text>
           </View>

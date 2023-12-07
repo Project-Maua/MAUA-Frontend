@@ -1,51 +1,36 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome'; 
-import {customStyles} from '../assets/style';
+import React from 'react'
+import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome' 
+import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
-  const title = "Welcome!";
-  const message = "This is a sample card box in React Native.";
-  const cardImage = require('../assets/schoolmaua.jpg');
-  const headerImage = require('../assets/schoolmaua.jpg');
+  const title = "Welcome!"
+  const message = "This is a sample card box in React Native."
+  const cardImage = require('../assets/schoolmaua.jpg')
+  const headerImage = require('../assets/schoolmaua.jpg')
 const HomePage = ({ navigation }) => {
 
   const {t, i18n} = useTranslation()
 
   const handleAgenda = () => {
     navigation.navigate('Agenda')
-  };
+  }
   const handleActivity = () => {
     navigation.navigate('Activity')
-  };
+  }
   const handleCampusMaps = () => {
     navigation.navigate('CampusMaps')
-  };
+  }
   const handleGoogleMaps = () => {
     navigation.navigate('GoogleMaps')
-  };
+  }
   const handleInformations = () => {
     navigation.navigate('MenuACOPage')
   }
   const handleStudentOrganisation = () => {
     navigation.navigate('StudentOrganisation')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
-  };
-  const handleNotification = () => {
-    navigation.navigate('Notification')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
-  };
-  const handleSettings = () => {
-    navigation.navigate('Settings')
-
-    // Implement your login logic here
-    // Typically, you would make an API call to authenticate the user
-  };
+  }
 
   return (
     <SafeAreaView>
@@ -138,8 +123,8 @@ const HomePage = ({ navigation }) => {
     </View>
     </ScrollView>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage
 

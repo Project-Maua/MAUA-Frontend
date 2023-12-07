@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import {View, ScrollView, Text } from 'react-native';
-import Course from '../components/Course.js';
-import {customStyles} from '../assets/style';
+import React, { useState, useEffect } from 'react'
+import {View, ScrollView, Text } from 'react-native'
+import Course from '../components/Course.js'
+import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
-import Constants from '../utils/Constants.js';
+import Constants from '../utils/Constants.js'
 
 const CoursePage = () => {
   const {t, i18n} = useTranslation()
-  const [data, setData] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([])
+  const [isLoading, setLoading] = useState(true)
 
 
   const getActivities = async () => {
@@ -18,19 +18,19 @@ const CoursePage = () => {
         header:{
           "Content-Type":"application/json"
         }
-      });
-      const json = await response.json();
-      setData(json);
+      })
+      const json = await response.json()
+      setData(json)
     } catch (error) {
-      console.error(error);
+      console.error(error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   useEffect(() => {
-    getActivities();
-  }, []);
+    getActivities()
+  }, [])
 
   return (
     <ScrollView>
@@ -53,10 +53,10 @@ const CoursePage = () => {
     </View>
   </ScrollView> 
 
-  );
-};
+  )
+}
 
-export default CoursePage;
+export default CoursePage
 
 const courses = [
   {
@@ -72,7 +72,7 @@ const courses = [
     'id': 'co-000002',
     'image': 'https://maua.br/img/upload/banner-engenharia-civil-1677511131.jpg',
     'name': 'Engenharia Civil',
-    'description': 'Descubra um universo de possibilidades com o nosso renomado curso de Engenharia Civil da Mauá. Preparamos você para enfrentar os desafios da sociedade moderna, abrangendo desde o planejamento urbano até a construção de edifícios residenciais e comerciais, pontes imponentes, rodovias e ferrovias estratégicas, aeroportos funcionais e infraestrutura vital, incluindo a elaboração de projetos desde sistemas de saneamento básico até a mobilidade para cidades inteligentes, incorporando as mais modernas tecnologias.\nAqui, incentivamos o espírito empreendedor, permitindo que você crie e gerencie sua própria empresa, embasado nas melhores práticas do setor. Se você busca uma carreira dinâmica e impactante na área de Engenharia Civil, junte-se a nós no curso da Mauá e abra portas para um futuro repleto de oportunidades.\nEm quais campos trabalhar:\nConstrução Civil - atue no projeto e em construções em geral como edifícios residenciais, industriais, comerciais, de serviços, lazer, no desenvolvimento de tecnologias, materiais de construção e gerenciamento de obras;\nEstruturas - trabalhe no desenvolvimento dos mais variados projetos aplicados à construção civil: concreto armado e protendido, estruturas metálicas e em madeira, pontes, túneis e estruturas portuárias.\nGeotecnia - atue no desenvolvimento de projetos e obras de barragens, fundações, escavações de poços, túneis e subsolos, estruturas de contenção para aterros, obras ambientais e sistemas de contenção para locais de risco\nSaneamento básico e recursos hídricos -  atue em sistemas de abastecimento de água e coleta de esgotos; estações de tratamento e na regularização de rios, canais, drenagem urbana e obras relacionadas com  hidrelétricas;\nTransportes - atue no planejamento e implementação de rodovias, ferrovias, aeroportos, navegações e sistemas de logística e transporte.',
+    'description': 'Descubra um universo de possibilidades com o nosso renomado curso de Engenharia Civil da Mauá. Preparamos você para enfrentar os desafios da sociedade moderna, abrangendo desde o planejamento urbano até a construção de edifícios residenciais e comerciais, pontes imponentes, rodovias e ferrovias estratégicas, aeroportos funcionais e infraestrutura vital, incluindo a elaboração de projetos desde sistemas de saneamento básico até a mobilidade para cidades inteligentes, incorporando as mais modernas tecnologias.\nAqui, incentivamos o espírito empreendedor, permitindo que você crie e gerencie sua própria empresa, embasado nas melhores práticas do setor. Se você busca uma carreira dinâmica e impactante na área de Engenharia Civil, junte-se a nós no curso da Mauá e abra portas para um futuro repleto de oportunidades.\nEm quais campos trabalhar:\nConstrução Civil - atue no projeto e em construções em geral como edifícios residenciais, industriais, comerciais, de serviços, lazer, no desenvolvimento de tecnologias, materiais de construção e gerenciamento de obras\nEstruturas - trabalhe no desenvolvimento dos mais variados projetos aplicados à construção civil: concreto armado e protendido, estruturas metálicas e em madeira, pontes, túneis e estruturas portuárias.\nGeotecnia - atue no desenvolvimento de projetos e obras de barragens, fundações, escavações de poços, túneis e subsolos, estruturas de contenção para aterros, obras ambientais e sistemas de contenção para locais de risco\nSaneamento básico e recursos hídricos -  atue em sistemas de abastecimento de água e coleta de esgotos estações de tratamento e na regularização de rios, canais, drenagem urbana e obras relacionadas com  hidrelétricas\nTransportes - atue no planejamento e implementação de rodovias, ferrovias, aeroportos, navegações e sistemas de logística e transporte.',
     'duration': '5 anos',
     'tuition': '3891.00',
     'shift': 'Diurno'

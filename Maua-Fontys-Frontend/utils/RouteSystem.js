@@ -7,16 +7,16 @@ import GoogleMapsPage from '../pages/GoogleMapsPage'
 import HomePage from '../pages/HomePage'
 import LoginPage from '../pages/LoginPage'
 import SettingsPage from '../pages/SettingsPage'
-import StudentOrganisationPage from '../pages/StudentOrganisationPage';
-import NotificationPage from '../pages/NotificationPage';
-import AddNotificationPage from '../pages/AddNotificationPage';
-import { TouchableOpacity} from 'react-native';
-import { HeaderButtons } from 'react-navigation-header-buttons';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import StudentOrganisationPage from '../pages/StudentOrganisationPage'
+import NotificationPage from '../pages/NotificationPage'
+import AddNotificationPage from '../pages/AddNotificationPage'
+import { TouchableOpacity} from 'react-native'
+import { HeaderButtons } from 'react-navigation-header-buttons'
+import Icon from 'react-native-vector-icons/FontAwesome'
 import MauaLogo from '../components/MauaLogo'
 import MenuACOPage from '../pages/MenuAboutCoursesOrganizations'
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 //All screens must be put inside the Stack.Navigater in order to be available
 const RouteSystem = () => (

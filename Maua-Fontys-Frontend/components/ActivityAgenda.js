@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, Button } from 'react-native';
+import React, { useState } from 'react'
+import { View, Text, Image, StyleSheet, Button } from 'react-native'
 
 const AgendaActivity = (props) => {
     const [activity, setActivity] = useState(props.activity)
@@ -19,8 +19,8 @@ const AgendaActivity = (props) => {
       </View>
     </View>
 
-    );
-  };
+    )
+  }
 
   const styles = StyleSheet.create({
     image: {
@@ -52,6 +52,6 @@ const AgendaActivity = (props) => {
       width: '50%',
       margin: 10,
     },
-  });
+  })
 
-export default AgendaActivity;
+export default AgendaActivity

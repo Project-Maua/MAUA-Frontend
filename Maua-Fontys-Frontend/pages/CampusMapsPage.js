@@ -1,17 +1,17 @@
-import React, { useRef } from 'react';
-import { View, StyleSheet, Dimensions, Image, Alert, ImageBackground } from 'react-native';
-import ImageZoom from 'react-native-image-pan-zoom';
-import Svg, { Circle, Ellipse, Polygon } from 'react-native-svg';
+import React, { useRef } from 'react'
+import { View, StyleSheet, Dimensions, Image, Alert, ImageBackground } from 'react-native'
+import ImageZoom from 'react-native-image-pan-zoom'
+import Svg, { Circle, Ellipse, Polygon } from 'react-native-svg'
 
 const CampusMaps = () => {
   function relativePosition(px,py,rx,ry){
-    x = (px*rx)/360;
-    y = (py*ry)/800;
+    x = (px*rx)/360
+    y = (py*ry)/800
   
     return `${x},${y}`
   }
-  const windowWidth = Dimensions.get('screen').width;
-  const windowHeight = Dimensions.get('screen').height;
+  const windowWidth = Dimensions.get('screen').width
+  const windowHeight = Dimensions.get('screen').height
   const absolutePoints={
   'buildingA':[[301,365], [294,350], [322,270], [328,285]],
   'buildingB':[[283,323], [291,337], [317,254], [310,245]],
@@ -40,7 +40,7 @@ for(var key in absolutePoints){
     v = ''
     absolutePoints[key].forEach(element => {
         v = v+relativePosition(element[0],element[1],windowWidth,windowHeight)+' '
-    });
+    })
     builderPoints[key]=v.slice(0,-1)
 }
   // As coordenadas dos botões (ajuste conforme necessário)
@@ -200,13 +200,13 @@ for(var key in absolutePoints){
         
       </ImageZoom>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-});
+})
 
-export default CampusMaps;
+export default CampusMaps

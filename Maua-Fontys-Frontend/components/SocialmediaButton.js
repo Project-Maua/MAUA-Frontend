@@ -1,6 +1,6 @@
-import {StyleSheet, Text, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {customStyles} from '../assets/style';
+import {StyleSheet, Text, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import {customStyles} from '../assets/style'
 
 const SocialmediaButton = ({icon}) => {
     return (

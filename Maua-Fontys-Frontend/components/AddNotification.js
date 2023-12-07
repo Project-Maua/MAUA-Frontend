@@ -1,40 +1,40 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import React, { useState } from 'react'
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
-import MessageBox from './MessageBox';
+import MessageBox from './MessageBox'
 
 function AddNotification() {
-  const [visibleDate, setVisibleDate] = useState(false);
-  const [visibleTime, setVisibleTime] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
-  const [startTime, setStartTime] = useState(new Date());
+  const [visibleDate, setVisibleDate] = useState(false)
+  const [visibleTime, setVisibleTime] = useState(false)
+  const [startDate, setStartDate] = useState(new Date())
+  const [startTime, setStartTime] = useState(new Date())
 
   const showDatePicker = () => {
-    setVisibleDate(true);
-  };
+    setVisibleDate(true)
+  }
 
   const hideDatePicker = () => {
-    setVisibleDate(false);
-  };
+    setVisibleDate(false)
+  }
 
   const handleDateConfirm = (date) => {
-    setStartDate(date);
-    hideDatePicker();
-  };
+    setStartDate(date)
+    hideDatePicker()
+  }
 
   const showTimePicker = () => {
-    setVisibleTime(true);
-  };
+    setVisibleTime(true)
+  }
 
   const hideTimePicker = () => {
-    setVisibleTime(false);
-  };
+    setVisibleTime(false)
+  }
 
   const handleTimeConfirm = (time) => {
-    setStartTime(time);
-    hideTimePicker();
-  };
+    setStartTime(time)
+    hideTimePicker()
+  }
 
   return (
     <View style={styles.container}>
@@ -60,7 +60,7 @@ function AddNotification() {
       </TouchableOpacity>
       <MessageBox />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -90,6 +90,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 30
   }
-});
+})
 
-export default AddNotification;
+export default AddNotification

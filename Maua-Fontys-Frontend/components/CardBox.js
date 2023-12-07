@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React from 'react'
+import { View, Text, Button, StyleSheet } from 'react-native'
 
 const CardBox = ({ title, text, buttonText, onPressButton }) => {
   return (
@@ -8,8 +8,8 @@ const CardBox = ({ title, text, buttonText, onPressButton }) => {
       <Text style={styles.text}>{text}</Text>
       <Button title={buttonText} onPress={onPressButton} />
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   card: {
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
   },
-});
+})
 
-export default CardBox;
+export default CardBox

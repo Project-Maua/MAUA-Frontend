@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import {customStyles} from '../assets/style';
+import React, { useState } from 'react'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import {customStyles} from '../assets/style'
 
-const cardImage = require('../assets/schoolmaua.jpg');
+const cardImage = require('../assets/schoolmaua.jpg')
 
 const StudentOrganisation = (props) => {
     const [StudentOrg, setStudentOrganisation] = useState(props.StudentOrganisation)
@@ -24,7 +24,7 @@ const StudentOrganisation = (props) => {
         </View>
     </View>
       
-    );
-  };
+    )
+  }
 
-export default StudentOrganisation;
+export default StudentOrganisation

@@ -1,60 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, Button, SafeAreaView } from 'react-native';
-import { Calendar } from 'react-native-calendars';
-import Activity from '../components/Activity';
-import {customStyles} from '../assets/style';
-
+import React, { useState, useEffect } from 'react'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
+import { Calendar } from 'react-native-calendars'
+import Activity from '../components/Activity'
+import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
-
 const AgendaPage = () => {
-
   const {t, i18n} = useTranslation()
-  const [data, setData] = useState([]);
-  const [isLoading, setLoading] = useState(true);
-  const activities = [
-      {
-        'id': 'ac-123453',
-        'image': '../mocks/images/tracking.jpg',
-        'name': 'Tracking',
-        'time': '11:30',
-        'date': '13/09/2023',
-        'location': 'Block D - room D1',
-        'subscribed': 'True/False',
-        'description': 'Students will tack ... use time... calculus.'
-      },
-      {
-        'id': 'ac-123454',
-        'image': 'IMAGE',
-        'name': 'Rocket challenge',
-        'time': '11:30',
-        'date': '13/09/2023',
-        'location': 'Block S - room Field',
-        'subscribed': 'True/False',
-        'description': 'Students throw ... rockets... with water.'
-      },
-      {
-        'id': 'ac-12354',
-        'image': 'IMAGE',
-        'name': 'challenge',
-        'time': '13:30',
-        'date': '14/09/2023',
-        'location': 'room Field',
-        'subscribed': 'True/False',
-        'description': 'Students throw ... rockets... with water.'
-      },
-      {
-        'id': 'ac-1254',
-        'image': 'IMAGE',
-        'name': 'Bee',
-        'time': '16:30',
-        'date': '15/09/2023',
-        'location': 'Block Q - room Q12',
-        'subscribed': 'False',
-        'description': 'Students throw ... rockets... with water.'
-      }
-    ]  
+  const [data, setData] = useState([])
+  const [isLoading, setLoading] = useState(true) 
   
     const getActivities = async () => {
       try {
@@ -62,40 +17,88 @@ const AgendaPage = () => {
           header:{
             "Content-Type":"application/json"
           }
-        });
-        const json = await response.json();
-        setData(json.movies);
+        })
+        const json = await response.json()
+        setData(json.movies)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
     useEffect(() => {
-      getActivities();
-    }, []);
-    console.log(data)
+      getActivities()
+    }, [])
+
     return (
       <SafeAreaView style={customStyles.body_background_agendapage}>
 
       <View style={customStyles.agenda_container}>
         <Calendar style={customStyles.agenda}
           onDayPress={(day) => {
-            console.log('Selected day', day);
+            console.log('Selected day', day)
           }}
         />
       </View>
       <ScrollView contentContainerStyle={customStyles.agenda_activity_container}>
       <Text style={customStyles.body_text}>{t("University Activities")}</Text>
         <View style={""}>
-          {activities.map((activity, index) => (
+          {Activities.map((activity, index) => (
             <Activity key={index} activity={activity} />
           ))}
         </View>
       </ScrollView>
     </SafeAreaView>
-   );
-  };
+   )
+  }
   
-export default AgendaPage;
+export default AgendaPage
+
+const Activities = [
+  {
+      'id': 'ac-000001',
+      'image': 'https://maua.br/img/upload/campus-scs-1645732308.jpg',
+      'name': 'Tracking on Campus',
+      'startTime': '2023/09/13 11:30:00.000',
+      'endTime': '2023/09/13 13:20:00.000',
+      'location': 'Block D - room D1',
+      'description': 'Students will tack ... use time... calculus...'
+  },
+  {
+      'id': 'ac-000002',
+      'image': 'https://maua.br/img/upload/grupos-de-extensao-imt-1694809070.jpg',
+      'name': 'Rocket challenge',
+      'startTime': '2023/09/14 13:30:00.000',
+      'endTime': '2023/09/14 15:45:00.000',
+      'location': 'Block S - room Field',
+      'description': 'Students throw ... rockets... with water...'
+  },
+  {
+      'id': 'ac-000003',
+      'image': 'https://maua.br/img/upload/banner-controle-automacao-1677511251.jpg',
+      'name': 'Coding Workshop',
+      'startTime': '2023/09/15 09:00:00.000',
+      'endTime': '2023/09/15 12:00:00.000',
+      'location': 'Block W - room W402',
+      'description': 'Learn the basics of coding using Python and JavaScript.'
+  },
+  {
+      'id': 'ac-000004',
+      'image': 'https://maua.br/img/upload/matriculas-e-transferencias-1695241733.jpg',
+      'name': 'Socialization Dynamic',
+      'startTime': '2023/09/16 14:00:00.000',
+      'endTime': '2023/09/16 18:00:00.000',
+      'location': 'Block S - Gymnasium',
+      'description': 'Explore the creativity of students through various activities.'
+  },
+  {
+      'id': 'ac-000005',
+      'image': 'https://maua.br/img/upload/iniciacao-cientifica-1663256113.jpg',
+      'name': 'Chemistry Challenge',
+      'startTime': '2023/09/17 16:00:00.000',
+      'endTime': '2023/09/17 17:30:00.000',
+      'location': 'Block R - room R2',
+      'description': 'Engage in a friendly competition to promote knowledge and integration.'
+  }
+]

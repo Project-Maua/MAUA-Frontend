@@ -1,4 +1,4 @@
-import RouteSystem from "./utils/RouteSystem";
+import RouteSystem from "./utils/RouteSystem"
 
 const App = () => <RouteSystem />
 

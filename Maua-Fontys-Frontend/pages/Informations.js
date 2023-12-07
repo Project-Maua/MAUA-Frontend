@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Course from '../components/Course.js';
+import React, { useState, useEffect } from 'react'
+import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import Course from '../components/Course.js'
 
-const cardImage = require('../assets/schoolmaua.jpg');
+const cardImage = require('../assets/schoolmaua.jpg')
 
 const courses = [
   {
@@ -22,10 +22,10 @@ const organizationsData = [
     { id: 1, image: "https://classic.exame.com/wp-content/uploads/2020/04/gettyimages-1168910967-e1587388035606.jpg?quality=70&strip=info&w=1024", name: 'Organizarion 1', description: 'Organization Description 1' },
     { id: 2, image: "https://classic.exame.com/wp-content/uploads/2020/04/gettyimages-1168910967-e1587388035606.jpg?quality=70&strip=info&w=1024", name: 'Organizarion 2', description: 'Organization Description 2' },
     { id: 3, image: "https://classic.exame.com/wp-content/uploads/2020/04/gettyimages-1168910967-e1587388035606.jpg?quality=70&strip=info&w=1024", name: 'Organizarion 3', description: 'Organization Description 3' }
-];
+]
 
 const ItemDetail = ({ item }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false)
 
   return (
     <View>
@@ -37,25 +37,25 @@ const ItemDetail = ({ item }) => {
         </View>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 const CoursesScreen = async () => {
   try {
     const response = await fetch('https://reactnative.dev/movies.json',{
       header:{
         "Content-Type":"application/json"
       }
-    });
-    const json = await response.json();
-    setData(json.movies);
+    })
+    const json = await response.json()
+    setData(json.movies)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   } finally {
-    setLoading(false);
+    setLoading(false)
   }
 useEffect(() => {
-  CoursesScreen();
-}, []);
+  CoursesScreen()
+}, [])
   return (
     <ScrollView>
         <Text style={styles.textbetween}>Maua courses</Text>
@@ -72,8 +72,8 @@ useEffect(() => {
               </View>
         </View>
     </ScrollView>      
-  );
-};
+  )
+}
 
 const OrganizationsScreen = () => {
   return (
@@ -82,8 +82,8 @@ const OrganizationsScreen = () => {
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <ItemDetail item={item} />}
     />
-  );
-};
+  )
+}
 
 const AboutScreen = () => {
   return (
@@ -139,11 +139,11 @@ const AboutScreen = () => {
               </View>
           </View>
       </ScrollView>
-  );
-};
+  )
+}
 
 // Configuração das abas de navegação
-const Tab = createMaterialTopTabNavigator();
+const Tab = createMaterialTopTabNavigator()
 
 const Informations = () => {
   return (
@@ -152,8 +152,8 @@ const Informations = () => {
           <Tab.Screen name="Courses" component={CoursesScreen} />
           <Tab.Screen name="Organizations" component={OrganizationsScreen} />
         </Tab.Navigator>
-  );
-};
+  )
+}
 const styles = StyleSheet.create({
   SmallerMessage: {
     color: 'white',
@@ -249,6 +249,6 @@ const styles = StyleSheet.create({
     marginBottom: 'auto',
     fontSize: 16,
   },
-});
+})
 
-export default Informations;
+export default Informations

@@ -19,13 +19,13 @@ const MenuACOPage = ({ navigation }) => {
 
     const handleCourses = () => {
         setTab(Tabs.courses)
-    };
+    }
     const handleAbout = () => {
         setTab(Tabs.about)
-    };
+    }
     const handleOrganisation = () => {
         setTab(Tabs.organizations)
-    };
+    }
 
     const getButtonStyle = (buttonTab) => {
       return (buttonTab == currentTab ? 
@@ -73,7 +73,7 @@ const MenuACOPage = ({ navigation }) => {
     </View>
   </ScrollView> 
 
-  );
-};
+  )
+}
 
-export default MenuACOPage;
+export default MenuACOPage

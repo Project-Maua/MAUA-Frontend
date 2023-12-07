@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, SafeAreaView, ScrollView } from 'react-native'
 import Notifications from '../components/Notifications'
 import {customStyles} from '../assets/style'
-import Constants from '../utils/Constants';
+import Constants from '../utils/Constants'
 
 const NotificationPage = () => {
-    const [data, setData] = useState([]);
-    const [isLoading, setLoading] = useState(true);
+    const [data, setData] = useState([])
+    const [isLoading, setLoading] = useState(true)
   
     const getActivities = async () => {
       try {
@@ -14,19 +14,19 @@ const NotificationPage = () => {
           header:{
             "Content-Type":"application/json"
           }
-        });
-        const json = await response.json();
-        setData(json);
+        })
+        const json = await response.json()
+        setData(json)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
   
     useEffect(() => {
-      getActivities();
-    }, []);
+      getActivities()
+    }, [])
 
     return (
         <SafeAreaView>
@@ -47,8 +47,8 @@ const NotificationPage = () => {
                 </View>
             </ScrollView>
         </SafeAreaView>
-    );
-};
+    )
+}
 
 export default NotificationPage
 

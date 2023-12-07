@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 
 function MessageBox() {
-  const [message, setMessage] = useState('');
-  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('')
+  const [title, setTitle] = useState('')
   const handleSave = () => {
-    console.log('Saved:', title , message);
-  };
+    console.log('Saved:', title , message)
+  }
 
   return (
     <View>
@@ -29,7 +29,7 @@ function MessageBox() {
       </TouchableOpacity>
     </View>
 
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default MessageBox;
+export default MessageBox

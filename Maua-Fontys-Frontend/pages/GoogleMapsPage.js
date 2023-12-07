@@ -1,12 +1,12 @@
 
-import React, { Component } from 'react';
-import { View, StyleSheet, Text, Linking, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react'
+import { View, StyleSheet, Text, Linking, TouchableOpacity } from 'react-native'
 // Adicionar essa linha
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
-const url = 'https://www.google.com/maps/place/Instituto+Mauá+de+Tecnologia/@-23.6480707,-46.5732959,16z/data=!4m6!3m5!1s0x94ce434992a4cad7:0x75aa65b7b5099c2!8m2!3d-23.647955!4d-46.574245!16s%2Fm%2F0nd4yst?ent';
+const url = 'https://www.google.com/maps/place/Instituto+Mauá+de+Tecnologia/@-23.6480707,-46.5732959,16z/data=!4m6!3m5!1s0x94ce434992a4cad7:0x75aa65b7b5099c2!8m2!3d-23.647955!4d-46.574245!16s%2Fm%2F0nd4yst?ent'
 
 const styles = StyleSheet.create({
  container: {
@@ -35,7 +35,7 @@ buttonText:{
   marginBottom: 'auto',
   fontSize: 16,
 },
-});
+})
 
 const GoogleMapsPage = () => {
 
@@ -69,6 +69,6 @@ const GoogleMapsPage = () => {
     
   </View>
   )
-};
+}
 
 export default GoogleMapsPage

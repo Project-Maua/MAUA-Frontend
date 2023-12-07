@@ -1,6 +1,6 @@
-import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AddNotification from '../components/AddNotification';
+import React from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import AddNotification from '../components/AddNotification'
 
 
 const AddNotificationPage = () => {
@@ -8,6 +8,6 @@ const AddNotificationPage = () => {
     <SafeAreaProvider>
       <AddNotification/>
       </SafeAreaProvider>
-  );
+  )
 }
-export default AddNotificationPage;
+export default AddNotificationPage

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import {customStyles} from '../assets/style';
+import React, { useState } from 'react'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import {customStyles} from '../assets/style'
 
 const Notifications = (props) => {
-  const [notification] = useState(props.notification);
+  const [notification] = useState(props.notification)
   const handleButtonPress = () => {
-    console.log('Button pressed');
-  };
+    console.log('Button pressed')
+  }
 
   return (
     <View style={styles.card}>
@@ -19,7 +19,7 @@ const Notifications = (props) => {
     </View>
 </View>
 
-  );
+  )
 }
 const styles = StyleSheet.create({
   card: {
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
       fontSize: 16,
   },
   
-});
+})
 
-export default Notifications;
+export default Notifications

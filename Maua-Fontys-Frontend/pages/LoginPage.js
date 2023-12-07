@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React, { useState } from 'react'
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
 import {customStyles} from '../assets/style'
-import SocialmediaButton from '../components/SocialmediaButton';
+import SocialmediaButton from '../components/SocialmediaButton'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
 const LoginPage = ({ navigation }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false);
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [rememberMe, setRememberMe] = useState(false)
   
     const handleSignIn = () => {
       navigation.navigate('Home')
 
       // Implement your login logic here
       // Typically, you would make an API call to authenticate the user
-    };
+    }
   
     const handleForgotPassword = () => {
       // Implement your forgot password logic here
       // This can navigate to a password reset screen or send a password reset email
-    };
+    }
 
     const {t, i18n} = useTranslation()
   
@@ -86,8 +86,8 @@ const LoginPage = ({ navigation }) => {
           </View>
         </View>
       </View>
-    );
-  };
+    )
+  }
 
-export default LoginPage;
+export default LoginPage
 

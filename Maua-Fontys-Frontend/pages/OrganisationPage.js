@@ -10,8 +10,8 @@ const cardImage = require('../assets/schoolmaua.jpg')
 
 const OrganisationPage = () => {
   const {t, i18n} = useTranslation()
-  const [data, setData] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([])
+  const [isLoading, setLoading] = useState(true)
 
   const getActivities = async () => {
     try {
@@ -19,19 +19,19 @@ const OrganisationPage = () => {
         header:{
           "Content-Type":"application/json"
         }
-      });
-      const json = await response.json();
-      setData(json);
+      })
+      const json = await response.json()
+      setData(json)
     } catch (error) {
-      console.error(error);
+      console.error(error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   useEffect(() => {
-    getActivities();
-  }, []);
+    getActivities()
+  }, [])
   
   return (
     <ScrollView>
@@ -80,13 +80,13 @@ const OrganisationPage = () => {
     </View>
   </ScrollView> 
 
-  );
-};
+  )
+}
 
-export default OrganisationPage;
+export default OrganisationPage
 
 const organisations = [
-  {
+{
     'id': 'or-000001',
     'image': 'https://maua.br/img/upload/banner-nawat-games-1678304646.jpg',
     'name': 'Nawat Games',
@@ -102,7 +102,7 @@ const organisations = [
     'id': 'or-000003',
     'image': 'https://maua.br/img/upload/112017/atividade-extracurricular-enactus-07083503.png',
     'name': 'Enactus Mauá',
-    'description': 'A Enactus é uma organização estudantil internacional, sem fins lucrativos, que reúne estudantes e líderes de negócios, os quais possuem o desejo de desenvolver projetos sociais por meio da ação empreendedora. Nossos projetos têm por objetivo sanar as necessidades de comunidades carentes em três pilares: Econômico (geração de renda), Social (empoderamento e desenvolvimento da comunidade) e Ambiental (não agressão ao meio ambiente). Não queremos apenas conceder uma saída para o problema, mas caminhar junto da comunidade, ensinando-a a dar seus próprios passos empreendedores, para que, assim, seus membros se capacitem, desenvolvendo suas próprias habilidades e, em consequência, melhorem suas vidas e o meio em que vivem. E a transformação acontece dos dois lados: as pessoas a que servimos e a nós mesmos, que desenvolvemos valores para nos tornarmos os verdadeiros líderes do futuro.\nENtrepreneurial(empreendedorismo) - ter a perspectiva de ver uma oportunidade e o talento de criar valor a partir dela;\nACTion(ação) - a vontade de fazer algo e o comprometimento de fazê-lo;\nUS(nós) - estudantes, acadêmicos e líderes de negócios que se veem conectados de alguma maneira importante.',
+    'description': 'A Enactus é uma organização estudantil internacional, sem fins lucrativos, que reúne estudantes e líderes de negócios, os quais possuem o desejo de desenvolver projetos sociais por meio da ação empreendedora. Nossos projetos têm por objetivo sanar as necessidades de comunidades carentes em três pilares: Econômico (geração de renda), Social (empoderamento e desenvolvimento da comunidade) e Ambiental (não agressão ao meio ambiente). Não queremos apenas conceder uma saída para o problema, mas caminhar junto da comunidade, ensinando-a a dar seus próprios passos empreendedores, para que, assim, seus membros se capacitem, desenvolvendo suas próprias habilidades e, em consequência, melhorem suas vidas e o meio em que vivem. E a transformação acontece dos dois lados: as pessoas a que servimos e a nós mesmos, que desenvolvemos valores para nos tornarmos os verdadeiros líderes do futuro.\nENtrepreneurial(empreendedorismo) - ter a perspectiva de ver uma oportunidade e o talento de criar valor a partir dela\nACTion(ação) - a vontade de fazer algo e o comprometimento de fazê-lo\nUS(nós) - estudantes, acadêmicos e líderes de negócios que se veem conectados de alguma maneira importante.',
 },
 {
     'id': 'or-000004',
@@ -114,6 +114,6 @@ const organisations = [
     'id': 'or-000005',
     'image': 'https://maua.br/img/upload/inova-maua-1645726778.png',
     'name': 'InovaMauá',
-    'description': 'O InovaMauá é uma organização de estudantes do Instituto Mauá de Tecnologia que desenvolve projetos, ideias e campanhas capazes de inovar e promover a sustentabilidade, buscando sempre envolver nossos pilares em nossos desafios.\nCom diversas pesquisas, muito estudos e experimentos buscamos verificar se as ideias são aplicáveis na prática. Quando obtemos sucesso nos desenvolvimentos, nosso trabalho é levado para competições acadêmicas, feiras e eventos internos e externos para divulgarmos nossas ideias e avanços.\nEm 2018 três projetos foram desenvolvidos: confecção de biopolímero a partir de amido de mandioca, tratamento de água contaminada com o uso de algas e material compósitos a base de papel reutilizado.\nDesenvolvemos campanhas para incentivar a reciclagem e a economia circular, como o uso consciente dos copos plásticos dentro do campus e o Mauá recicla.\nEm 2019 foram elaborados dois projetos: o tratamento de água contaminada com metais pesados através das fibras da casca de banana e do coco; e o desenvolvimento de uma biofralda inteligente geriátrica, onde além de possuir um material sustentável a fim de substituir o plástico, também foi construído um sensor para que fosse possível alertar o cuidador e/ou responsável do idoso, através de um aplicativo para smartphones, o momento mais adequado para a troca da fralda.\nEm 2020 dois projetos foram desenvolvidos: criação de um centro comunitário sustentável e um aplicativo educacional sobre uso e descarte de resíduos.\nParticipamos de um Hackthon onde ficamos entre as 20 equipes finalistas.\nDesenvolvemos uma campanha com a Startup Trash2Money para coleta de resíduos na faculdade para posterior reciclagem.\n\nOs pilares do INOVA são:\n- Engenharia;\n- Ética;\n- Sustentabilidade;\n- Educação;\n- Originalidade;\n- Pensamento crítico;\n- Inovação.'
+    'description': 'O InovaMauá é uma organização de estudantes do Instituto Mauá de Tecnologia que desenvolve projetos, ideias e campanhas capazes de inovar e promover a sustentabilidade, buscando sempre envolver nossos pilares em nossos desafios.\nCom diversas pesquisas, muito estudos e experimentos buscamos verificar se as ideias são aplicáveis na prática. Quando obtemos sucesso nos desenvolvimentos, nosso trabalho é levado para competições acadêmicas, feiras e eventos internos e externos para divulgarmos nossas ideias e avanços.\nEm 2018 três projetos foram desenvolvidos: confecção de biopolímero a partir de amido de mandioca, tratamento de água contaminada com o uso de algas e material compósitos a base de papel reutilizado.\nDesenvolvemos campanhas para incentivar a reciclagem e a economia circular, como o uso consciente dos copos plásticos dentro do campus e o Mauá recicla.\nEm 2019 foram elaborados dois projetos: o tratamento de água contaminada com metais pesados através das fibras da casca de banana e do coco e o desenvolvimento de uma biofralda inteligente geriátrica, onde além de possuir um material sustentável a fim de substituir o plástico, também foi construído um sensor para que fosse possível alertar o cuidador e/ou responsável do idoso, através de um aplicativo para smartphones, o momento mais adequado para a troca da fralda.\nEm 2020 dois projetos foram desenvolvidos: criação de um centro comunitário sustentável e um aplicativo educacional sobre uso e descarte de resíduos.\nParticipamos de um Hackthon onde ficamos entre as 20 equipes finalistas.\nDesenvolvemos uma campanha com a Startup Trash2Money para coleta de resíduos na faculdade para posterior reciclagem.\n\nOs pilares do INOVA são:\n- Engenharia\n- Ética\n- Sustentabilidade\n- Educação\n- Originalidade\n- Pensamento crítico\n- Inovação.'
 }  
 ]

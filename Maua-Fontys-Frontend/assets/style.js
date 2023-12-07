@@ -327,4 +327,4 @@ export const customStyles = StyleSheet.create({
       borderRadius: 20,
       backgroundColor: '#fff'
   },
-  });
+  })

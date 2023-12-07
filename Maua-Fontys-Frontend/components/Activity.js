@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import {customStyles} from '../assets/style';
+import React, { useState } from 'react'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import {customStyles} from '../assets/style'
 
-  const cardImage = require('../assets/schoolmaua.jpg');
+  const cardImage = require('../assets/schoolmaua.jpg')
 const Activity = (props) => {
     const [activity, setActivity] = useState(props.activity)
 
@@ -25,7 +25,7 @@ const Activity = (props) => {
         </View>
     </View>
       
-    );
-  };
+    )
+  }
 
-export default Activity;
+export default Activity

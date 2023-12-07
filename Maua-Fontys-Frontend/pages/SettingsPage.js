@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { View } from 'react-native';
+import { useState } from 'react'
+import { View } from 'react-native'
 import SettingButton from '../components/SettingButton'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'

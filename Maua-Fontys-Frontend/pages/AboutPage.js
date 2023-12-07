@@ -67,8 +67,6 @@ const AboutPage = ({navigation}) => {
   ]
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [email, setEmail] = useState('');
-
 
   const getActivities = async () => {
     try {
@@ -107,7 +105,7 @@ const AboutPage = ({navigation}) => {
         </View>
         <Text style={customStyles.body_text}>{t("About Maua")}</Text>
         <View style={customStyles.message_container}>
-          <Text style={customStyles.message_container_title}>{t("Here you can find more information about the Maua University ")}</Text>
+          <Text style={customStyles.message_container_title}>{t("Here you can find more information about the Maua University")}</Text>
           <Text style={customStyles.message_container_text}>{t("Provided by Maua University")}</Text>
         </View>
         <Text style={customStyles.body_text}>{t("Maua staff")}</Text>

@@ -8,10 +8,10 @@ const Course = (props) => {
 
     return (
     <View style={""}>
-      <Image source={cardImage} style={customStyles.card_image} />
+      <Image source={{uri: course.image}} style={customStyles.card_image} />
         <View style={customStyles.card_content}>
             <Text style={customStyles.card_title}>{course.name}</Text>
-            <Text style={customStyles.card_message}>{course.description}</Text>
+            <Text style={customStyles.card_message}>{course.description.substr(0, 10)+'...'}</Text>
               <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}

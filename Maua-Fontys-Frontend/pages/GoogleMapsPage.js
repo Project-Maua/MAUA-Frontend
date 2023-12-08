@@ -60,6 +60,7 @@ const GoogleMapsPage = () => {
            }}
            title={"Instituto Mauá de Tecnologia"}
            description={""}
+           onPress={() => Linking.openURL(url)}
         />
     </MapView>
     

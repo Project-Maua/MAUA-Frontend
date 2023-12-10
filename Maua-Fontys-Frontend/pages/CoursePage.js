@@ -29,7 +29,7 @@ const CoursePage = () => {
   }
 
   useEffect(() => {
-    getActivities()
+    // getActivities()
   }, [])
 
   return (

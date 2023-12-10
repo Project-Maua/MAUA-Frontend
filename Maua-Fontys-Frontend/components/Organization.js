@@ -3,19 +3,19 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import {customStyles} from '../assets/style'
 import { useNavigation } from '@react-navigation/native'
 
-const Course = ({course}) => {
+const Organization = ({organization}) => {
   const navigation = useNavigation();
 
     const handleMoreInfo = () => {
-      navigation.navigate("courseInfo", {info: course})
+      navigation.navigate("descriptionInfoPage", {info: organization})
     }
 
     return (
     <View style={""}>
-      <Image source={{uri: course.image}} style={customStyles.card_image} />
+      <Image source={{uri: organization.image}} style={customStyles.card_image} />
         <View style={customStyles.card_content}>
-            <Text style={customStyles.card_title}>{course.name}</Text>
-            <Text style={customStyles.card_message}>{course.description.substr(0, 30) + '...'}</Text>
+            <Text style={customStyles.card_title}>{organization.name}</Text>
+            <Text style={customStyles.card_message}>{organization.description.substr(0, 30) + '...'}</Text>
               <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={handleMoreInfo}
                     style={customStyles.button}
@@ -29,4 +29,4 @@ const Course = ({course}) => {
     )
   }
 
-export default Course
+export default Organization

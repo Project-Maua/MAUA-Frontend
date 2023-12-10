@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native'
-import Course from '../components/Course.js'
+import Organization from '../components/Organization.js'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
@@ -8,14 +8,14 @@ import Constants from '../utils/Constants.js'
 
 const cardImage = require('../assets/schoolmaua.jpg')
 
-const OrganisationPage = () => {
+const OrganizationPage = () => {
   const {t, i18n} = useTranslation()
   const [data, setData] = useState([])
   const [isLoading, setLoading] = useState(true)
 
   const getActivities = async () => {
     try {
-      const response = await fetch(Constants.organisations_url, {
+      const response = await fetch(Constants.organizations_url, {
         header:{
           "Content-Type":"application/json"
         }
@@ -30,14 +30,14 @@ const OrganisationPage = () => {
   }
 
   useEffect(() => {
-    getActivities()
+    // getActivities()
   }, [])
   
   return (
     <ScrollView>
     <View>
       <View style={""}>
-        <Text style={customStyles.body_text}>{t("Maua Organisations")}</Text>
+        <Text style={customStyles.body_text}>{t("Maua Organizations")}</Text>
         <View style={customStyles.row_two_components}>
             <View style={customStyles.card}>
               <Image source={cardImage} style={customStyles.card_image} />
@@ -71,8 +71,8 @@ const OrganisationPage = () => {
         <Text style={customStyles.body_text}>{t("Internal Program")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
-                {organisations.map((course, index) => (
-                  <Course key={index} course={course} />
+                {organizations.map((organization, index) => (
+                  <Organization key={index} organization={organization} />
                 ))}
               </View>
         </View>
@@ -83,9 +83,9 @@ const OrganisationPage = () => {
   )
 }
 
-export default OrganisationPage
+export default OrganizationPage
 
-const organisations = [
+const organizations = [
 {
     'id': 'or-000001',
     'image': 'https://maua.br/img/upload/banner-nawat-games-1678304646.jpg',

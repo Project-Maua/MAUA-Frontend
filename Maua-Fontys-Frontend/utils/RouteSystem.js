@@ -1,5 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
+import { TouchableOpacity} from 'react-native'
+import { HeaderButtons } from 'react-navigation-header-buttons'
 import ActivityPage from '../pages/ActivityPage'
 import AgendaPage from '../pages/AgendaPage'
 import CampusMapsPage from '../pages/CampusMapsPage'
@@ -7,15 +9,15 @@ import GoogleMapsPage from '../pages/GoogleMapsPage'
 import HomePage from '../pages/HomePage'
 import LoginPage from '../pages/LoginPage'
 import SettingsPage from '../pages/SettingsPage'
-import StudentOrganisationPage from '../pages/StudentOrganisationPage'
+import StudentOrganizationPage from '../pages/StudentOrganizationPage'
 import NotificationPage from '../pages/NotificationPage'
 import AddNotificationPage from '../pages/AddNotificationPage'
-import { TouchableOpacity} from 'react-native'
-import { HeaderButtons } from 'react-navigation-header-buttons'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import MauaLogo from '../components/MauaLogo'
 import MenuACOPage from '../pages/MenuAboutCoursesOrganizations'
-import MoreInfoPage from '../pages/MoreInfoPage'
+import ActivityInfoPage from '../pages/MoreInfoPages/ActivityInfoPage'
+import CourseInfoPage from '../pages/MoreInfoPages/CourseInfoPage'
+import DescriptionInfoPage from '../pages/MoreInfoPages/DescriptionInfoPage'
 
 const Stack = createNativeStackNavigator()
 
@@ -30,11 +32,13 @@ const RouteSystem = () => (
             <Stack.Screen name="GoogleMaps"          component={GoogleMapsPage}          />
             <Stack.Screen name="Home"                component={HomePage}                />
             <Stack.Screen name="Settings"            component={SettingsPage}            />
-            <Stack.Screen name="StudentOrganisation" component={StudentOrganisationPage} />
+            <Stack.Screen name="StudentOrganization" component={StudentOrganizationPage} />
             <Stack.Screen name="Notification"        component={NotificationPage}        />
             <Stack.Screen name="AddNotification"     component={AddNotificationPage}     />
             <Stack.Screen name="MenuACOPage"         component={MenuACOPage}             />
-            <Stack.Screen name="MoreInfo"            component={MoreInfoPage}            />
+            <Stack.Screen name="courseInfo"          component={CourseInfoPage}          />
+            <Stack.Screen name="activityInfo"        component={ActivityInfoPage}        />
+            <Stack.Screen name="descriptionInfoPage"    component={DescriptionInfoPage}  />
         </Stack.Navigator>
     </NavigationContainer>
 )

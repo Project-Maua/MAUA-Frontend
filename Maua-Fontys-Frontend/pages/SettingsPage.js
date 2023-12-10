@@ -30,7 +30,7 @@ const SettingsPage = () => {
   return (
     <View>
       <SettingButton onPress={()=>changeLanguage(currentLanguage)} text={t('Language')} icon='globe' />
-      <SettingButton text={t('Switch mode')} icon='arrow-switch' />
+      {/* <SettingButton text={t('Switch mode')} icon='arrow-switch' /> */}
       <SettingButton text={t('About')} icon='info' />
       <SettingButton text={t('Logout')} icon='sign-out' />
     </View>    

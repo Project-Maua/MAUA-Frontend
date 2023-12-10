@@ -3,12 +3,12 @@ import { View, ScrollView, Text,  Image } from 'react-native'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
-import Course from '../components/Course.js'
+import Organization from '../components/Organization.js'
 import Constants from '../utils/Constants.js'
 
 const headerImage = require('../assets/schoolmaua.jpg')
 
-const StudentOrganisationPage = () => {
+const StudentOrganizationPage = () => {
   const {t, i18n} = useTranslation()
   const [data, setData] = useState([])
   const [isLoading, setLoading] = useState(true)
@@ -16,7 +16,7 @@ const StudentOrganisationPage = () => {
 
   const getActivities = async () => {
     try {
-      const response = await fetch(Constants.organisations_url ,{
+      const response = await fetch(Constants.organizations_url ,{
         header:{
           "Content-Type":"application/json"
         }
@@ -31,7 +31,7 @@ const StudentOrganisationPage = () => {
   }
 
   useEffect(() => {
-    getActivities()
+    // getActivities()
   }, [])
 
   return (
@@ -42,14 +42,14 @@ const StudentOrganisationPage = () => {
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>
-            <Text style={customStyles.header_text}>{t("Student organisations of Maua")}</Text>
+            <Text style={customStyles.header_text}>{t("Student organizations of Maua")}</Text>
           </View>
         </View>
-        <Text style={customStyles.body_text}>{t("Organisations")}</Text>
+        <Text style={customStyles.body_text}>{t("Organizations")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>
                 {StudentOrg.map((studentOrg , index) => (
-                  <Course key={index} course={studentOrg} />
+                  <Organization key={index} organization={studentOrg} />
                 ))}
               </View>
         </View>
@@ -60,7 +60,7 @@ const StudentOrganisationPage = () => {
   )
 }
 
-export default StudentOrganisationPage
+export default StudentOrganizationPage
 
 const StudentOrg = [
   {

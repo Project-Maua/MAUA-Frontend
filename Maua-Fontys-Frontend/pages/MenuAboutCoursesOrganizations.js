@@ -3,7 +3,7 @@ import { View, ScrollView, Text, TouchableOpacity } from 'react-native'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
-import OrganisationPage from './OrganisationPage.js'
+import OrganizationPage from './OrganizationPage.js'
 import CoursePage from './CoursePage.js'
 import AboutPage from './AboutPage.js'
 
@@ -23,7 +23,7 @@ const MenuACOPage = ({ navigation }) => {
     const handleAbout = () => {
         setTab(Tabs.about)
     }
-    const handleOrganisation = () => {
+    const handleOrganization = () => {
         setTab(Tabs.organizations)
     }
 
@@ -47,7 +47,7 @@ const MenuACOPage = ({ navigation }) => {
           case Tabs.courses:
             return <CoursePage/>
           case Tabs.organizations:
-            return <OrganisationPage/>
+            return <OrganizationPage/>
         }
     }
   
@@ -63,8 +63,8 @@ const MenuACOPage = ({ navigation }) => {
                 <Text style={getButtonTextStyle(Tabs.courses)}>{t("Courses")}</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={getButtonStyle(Tabs.organizations)} onPress={handleOrganisation}>
-                <Text style={getButtonTextStyle(Tabs.organizations)}>{t("Organisation")}</Text>
+            <TouchableOpacity style={getButtonStyle(Tabs.organizations)} onPress={handleOrganization}>
+                <Text style={getButtonTextStyle(Tabs.organizations)}>{t("Organization")}</Text>
             </TouchableOpacity>
         </View>
         

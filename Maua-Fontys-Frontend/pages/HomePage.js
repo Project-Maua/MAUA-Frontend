@@ -29,8 +29,8 @@ const HomePage = ({ navigation }) => {
   const handleInformations = () => {
     navigation.navigate('MenuACOPage')
   }
-  const handleStudentOrganisation = () => {
-    navigation.navigate('StudentOrganisation')
+  const handleStudentOrganization = () => {
+    navigation.navigate('StudentOrganization')
   }
 
   return (
@@ -71,7 +71,7 @@ const HomePage = ({ navigation }) => {
                 <Icon name="play" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={customStyles.grid_button} onPress={handleStudentOrganisation}>
+            <TouchableOpacity style={customStyles.grid_button} onPress={handleStudentOrganization}>
               <Image source={cardImage} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="users" size={25} color="white" style={customStyles.grid_button_icon} />

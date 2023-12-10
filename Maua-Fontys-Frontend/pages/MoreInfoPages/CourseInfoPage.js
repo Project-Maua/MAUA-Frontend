@@ -1,7 +1,7 @@
 import { Text, View, Image, ScrollView } from "react-native"
-import {customStyles} from '../assets/style'
+import {customStyles} from '../../assets/style'
 
-const MoreInfoPage = ({route}) => {
+const CourseInfoPage = ({route}) => {
     const info = route.params.info
 
     return (
@@ -26,4 +26,4 @@ const MoreInfoPage = ({route}) => {
     )
 }
 
-export default MoreInfoPage
+export default CourseInfoPage

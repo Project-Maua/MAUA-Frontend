@@ -4,8 +4,8 @@ import {customStyles} from '../assets/style'
 
 const cardImage = require('../assets/schoolmaua.jpg')
 
-const StudentOrganisation = (props) => {
-    const [StudentOrg, setStudentOrganisation] = useState(props.StudentOrganisation)
+const StudentOrganization = (props) => {
+    const [StudentOrg, setStudentOrganization] = useState(props.StudentOrganization)
 
     return (
     <View style={""}>
@@ -27,4 +27,4 @@ const StudentOrganisation = (props) => {
     )
   }
 
-export default StudentOrganisation
+export default StudentOrganization

@@ -11,7 +11,7 @@ const Course = ({course}) => {
     }
 
     return (
-    <View style={""}>
+    <View style={customStyles.activity_card}>
       <Image source={{uri: course.image}} style={customStyles.card_image} />
         <View style={customStyles.card_content}>
             <Text style={customStyles.card_title}>{course.name}</Text>

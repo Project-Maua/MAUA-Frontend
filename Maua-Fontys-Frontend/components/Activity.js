@@ -11,7 +11,7 @@ const Activity = ({activity}) => {
   }
 
   return (
-  <View style={""}>
+  <View style={customStyles.activity_card}>
     <Image source={{uri: activity.image}} style={customStyles.card_image} />
       <View style={customStyles.card_content}>
           <Text style={customStyles.card_title}>{activity.name}</Text>

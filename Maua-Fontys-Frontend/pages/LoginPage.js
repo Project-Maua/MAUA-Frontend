@@ -78,7 +78,7 @@ const LoginPage = ({ navigation }) => {
                 <Text style={customStyles.button_text}>{t('Sign in')}</Text>
               </TouchableOpacity>              
             </View>
-            <View style={customStyles.row}>
+            <View style={customStyles.row_socials}>
               <SocialmediaButton  icon='facebook'/>
               <SocialmediaButton  icon='whatsapp'/>
               <SocialmediaButton  icon='instagram'/>

@@ -48,6 +48,12 @@ export const customStyles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between',
     },
+    row_socials:{
+      flex: 1,
+      flexDirection: 'row',
+      marginTop: 30,
+      marginBottom: 'auto',
+    },
   //Image Overlays:
   overlay_gray: {
     ...StyleSheet.absoluteFillObject,
@@ -71,7 +77,7 @@ export const customStyles = StyleSheet.create({
       alignItems: 'center',
     },   
     columntext_login:{
-      flex: 1,
+      ///flex: 1,
       justifyContent: 'left',
       textAlign: 'left',
       alignItems: 'left',
@@ -120,6 +126,7 @@ export const customStyles = StyleSheet.create({
       marginTop: 'auto',
       marginBottom: 'auto',
       fontSize: 16,
+      fontWeight: 'bold',
     },
     button_active:{
       backgroundColor: 'white',
@@ -135,6 +142,7 @@ export const customStyles = StyleSheet.create({
       marginTop: 'auto',
       marginBottom: 'auto',
       fontSize: 16,
+      fontWeight: 'bold',
     },
     //Topbar button
     topbar:{
@@ -143,6 +151,8 @@ export const customStyles = StyleSheet.create({
       alignItems: 'center',
       marginBottom: 10,
       marginTop: 10,
+      marginLeft: 5,
+      marginRight: 5,
     },
     //Remember me Checkbox
     checkboxContainer_login: {
@@ -313,6 +323,21 @@ export const customStyles = StyleSheet.create({
   },
   card_message: {
     fontSize: 16,
+  },
+  //Activity card
+  activity_card: {
+    width: "97%",
+    backgroundColor: 'lightgrey',
+    borderRadius: 10,
+    margin: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   //Description card
   description_header_container: {

@@ -10,6 +10,11 @@ import Constants from '../utils/Constants'
   const message = "This is a sample card box in React Native."
   const cardImage = require('../assets/schoolmaua.jpg')
   const headerImage = require('../assets/schoolmaua.jpg')
+  const cardImageNotification = require('../assets/Notification.jpg')
+  const cardImageMaps = require('../assets/Maps.jpg')
+  const cardImageAgenda = require('../assets/Agenda.jpg')
+  const cardImageWorkshop = require('../assets/Workshop.jpg')
+  const cardImageCampus = require('../assets/Campus.jpg')
 const HomePage = ({ navigation }) => {
 
   const {t, i18n} = useTranslation()
@@ -46,19 +51,19 @@ const HomePage = ({ navigation }) => {
         </View>
         <View style={customStyles.grid_container}>
             <TouchableOpacity style={customStyles.grid_button} onPress={handleAgenda} >
-              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <Image source={cardImageAgenda} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="calendar" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={customStyles.grid_button} onPress={handleCampusMaps}>
-              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <Image source={cardImageCampus} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="graduation-cap" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={customStyles.grid_button} onPress={handleGoogleMaps}>
-              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <Image source={cardImageMaps} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="compass" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
@@ -66,7 +71,7 @@ const HomePage = ({ navigation }) => {
         </View>
         <View style={customStyles.grid_container}>
         <TouchableOpacity style={customStyles.grid_button} onPress={handleActivity}>
-              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <Image source={cardImageWorkshop} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="play" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>
@@ -78,7 +83,7 @@ const HomePage = ({ navigation }) => {
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={customStyles.grid_button} onPress={handleInformations}>
-              <Image source={cardImage} style={customStyles.grid_button_image}></Image>
+              <Image source={cardImageNotification} style={customStyles.grid_button_image}></Image>
               <View style={customStyles.overlay_gray}>
                 <Icon name="info-circle" type="font-awesome" size={25} color="white" style={customStyles.grid_button_icon} />
               </View>

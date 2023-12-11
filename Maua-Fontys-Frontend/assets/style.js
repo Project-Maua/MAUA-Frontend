@@ -55,7 +55,7 @@ export const customStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    width: '97%',
+    width: '100%',
   },
   //Collumn_Login  
     logo_login: {
@@ -314,10 +314,52 @@ export const customStyles = StyleSheet.create({
   card_message: {
     fontSize: 16,
   },
+  //Description card
+  description_header_container: {
+    position: 'relative',
+    height: 170,
+    marginBottom: 10, 
+  },
+  description_header_image: {
+    width: '100%',
+    height: 170,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    resizeMode: 'cover',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  description_header_text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  description_card_image: {
+    width: '100%',
+    height: 140,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    resizeMode: 'cover',
+  },
+  description_card_content: {
+    padding: 10,
+  },
+  description_card_title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  description_card_subtitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  description_card_message: {
+    fontSize: 16,
+  },
   //Agenda container
   agenda_container: {
     backgroundColor: '#095dac',
-    padding: 20
+    padding: 40
   },
   agenda: {
     borderRadius: 20,

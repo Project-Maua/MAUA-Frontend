@@ -17,7 +17,7 @@ import MauaLogo from '../components/MauaLogo'
 import MenuACOPage from '../pages/MenuAboutCoursesOrganizations'
 import ActivityInfoPage from '../pages/MoreInfoPages/ActivityInfoPage'
 import CourseInfoPage from '../pages/MoreInfoPages/CourseInfoPage'
-import DescriptionInfoPage from '../pages/MoreInfoPages/DescriptionInfoPage'
+import OrganizationInfoPage from '../pages/MoreInfoPages/OrganizationInfoPage'
 
 const Stack = createNativeStackNavigator()
 
@@ -38,7 +38,7 @@ const RouteSystem = () => (
             <Stack.Screen name="MenuACOPage"         component={MenuACOPage}             />
             <Stack.Screen name="courseInfo"          component={CourseInfoPage}          />
             <Stack.Screen name="activityInfo"        component={ActivityInfoPage}        />
-            <Stack.Screen name="descriptionInfoPage"    component={DescriptionInfoPage}  />
+            <Stack.Screen name="organizationInfoPage"    component={OrganizationInfoPage}  />
         </Stack.Navigator>
     </NavigationContainer>
 )

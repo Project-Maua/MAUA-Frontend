@@ -1,21 +1,14 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
-import {customStyles} from '../assets/style'
+import { View, StyleSheet, Text } from 'react-native'
 
 const Notifications = (props) => {
   const [notification] = useState(props.notification)
-  const handleButtonPress = () => {
-    console.log('Button pressed')
-  }
 
   return (
     <View style={styles.card}>
     <View style={styles.content}>
         <Text style={styles.title}>{notification.title}</Text>
         <Text style={styles.message}>{notification.description}</Text>
-        <TouchableOpacity onPress={handleButtonPress} style={customStyles.button}>
-            <Text style={customStyles.button_text}>More info</Text>
-        </TouchableOpacity>
     </View>
 </View>
 

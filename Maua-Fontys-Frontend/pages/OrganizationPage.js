@@ -48,7 +48,7 @@ const OrganizationPage = () => {
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>{t("More info")}</Text>
+                    <Text style={customStyles.button_text}>{t('More info')}</Text>
                   </TouchableOpacity> 
                 </View>
               </View>
@@ -56,13 +56,13 @@ const OrganizationPage = () => {
             <View style={customStyles.card}>
               <Image source={cardImage} style={customStyles.card_image} />
               <View style={customStyles.card_content}>
-                <Text style={customStyles.card_title}>{t("Vice rector")}</Text>
+                <Text style={customStyles.card_title}>{ t("Vice rector") }</Text>
                 <Text style={customStyles.card_message}>...</Text>
                 <View style={customStyles.containeritem}>            
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>{t("More info")}</Text>
+                    <Text style={customStyles.button_text}>{ t("More info") }</Text>
                   </TouchableOpacity> 
                 </View>
               </View>

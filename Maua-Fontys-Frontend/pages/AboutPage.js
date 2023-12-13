@@ -4,6 +4,7 @@ import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 import Constants from '../utils/Constants.js'
+import CardBox from '../components/CardBox.js'
 
 const cardImage = require('../assets/schoolmaua.jpg')
 const AboutPage = () => {
@@ -20,35 +21,9 @@ const AboutPage = () => {
         </View>
         <Text style={customStyles.body_text}>{t("Maua staff")}</Text>
         <View style={customStyles.row_two_components}>
-            <View style={customStyles.card}>
-              <Image source={{uri: Constants.rectorImage }} style={customStyles.card_image} />
-              <View style={customStyles.card_content}>
-                <Text style={customStyles.card_title}>{t("Rector")}</Text>
-                <Text style={customStyles.card_message}>...</Text>
-                <View style={customStyles.containeritem}>            
-                  <TouchableOpacity onPress={""}
-                    style={customStyles.button}
-                  >
-                    <Text style={customStyles.button_text}>{t("More info")}</Text>
-                  </TouchableOpacity> 
-                </View>
-              </View>
-            </View>
-            <View style={customStyles.card}>
-              <Image source={{uri: Constants.viceRectorImage}} style={customStyles.card_image} />
-              <View style={customStyles.card_content}>
-                <Text style={customStyles.card_title}>{t("Vice rector")}</Text>
-                <Text style={customStyles.card_message}>...</Text>
-                <View style={customStyles.containeritem}>            
-                  <TouchableOpacity onPress={""}
-                    style={customStyles.button}
-                  >
-                    <Text style={customStyles.button_text}>{t("More info")}</Text>
-                  </TouchableOpacity> 
-                </View>
-              </View>
-            </View>
-          </View>
+            <CardBox title={ t("Vice rector")} message={'...'} image={Constants.viceRectorImage} />
+            <CardBox title={ t("Rector") } message={'...'} image={Constants.rectorImage} />
+        </View>
         <Text style={customStyles.body_text}>{t("Internal Program")}</Text>
         <View style={customStyles.row_align_center}>
               <View style={""}>

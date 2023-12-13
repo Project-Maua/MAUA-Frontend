@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, ScrollView, Text,  Image } from 'react-native'
+import { View, ScrollView, Text,  Image, ActivityIndicator } from 'react-native'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
@@ -14,7 +14,7 @@ const StudentOrganizationPage = () => {
   const [isLoading, setLoading] = useState(true)
 
 
-  const getActivities = async () => {
+  const getOrganizations = async () => {
     try {
       const response = await fetch(Constants.organizations_url ,{
         header:{
@@ -30,8 +30,13 @@ const StudentOrganizationPage = () => {
     }
   }
 
+  const getMock = () => {
+    setData(StudentOrg)
+    setLoading(false)
+  }
+
   useEffect(() => {
-    // getActivities()
+     getMock() // Change to getOrganizations()
   }, [])
 
   return (
@@ -42,13 +47,14 @@ const StudentOrganizationPage = () => {
         <View style={customStyles.header_container}>
           <Image source={headerImage} style={customStyles.header_image} />
           <View style={customStyles.overlay_gray}>
-            <Text style={customStyles.header_text}>{t("Student organizations of Maua")}</Text>
+            <Text style={customStyles.header_text}>{t("Student organisations of Maua")}</Text>
           </View>
         </View>
         <Text style={customStyles.body_text}>{t("Organizations")}</Text>
         <View style={customStyles.row_align_center}>
+        <ActivityIndicator size="large" color="#095DAC" animating={isLoading}/>
               <View style={""}>
-                {StudentOrg.map((studentOrg , index) => (
+                {data.map((studentOrg , index) => (
                   <Organization key={index} organization={studentOrg} />
                 ))}
               </View>

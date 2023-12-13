@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {View, ScrollView, Text } from 'react-native'
+import {View, ScrollView, Text, ActivityIndicator } from 'react-native'
 import Course from '../components/Course.js'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
@@ -11,8 +11,7 @@ const CoursePage = () => {
   const [data, setData] = useState([])
   const [isLoading, setLoading] = useState(true)
 
-
-  const getActivities = async () => {
+  const getCourses = async () => {
     try {
       const response = await fetch(Constants.courses_url, {
         header:{
@@ -28,23 +27,28 @@ const CoursePage = () => {
     }
   }
 
+  const getMock = () => {
+    setData(courses)
+    setLoading(false)
+  }
+
   useEffect(() => {
-    // getActivities()
+     getMock() // Change to getCourses()
   }, [])
 
   return (
     <ScrollView>
     <View>
       <View style={""}>
-        <Text style={customStyles.body_text}>{t("Maua courses")}</Text>
+        <Text style={customStyles.body_text}>{t("Maua Courses")}</Text>
         <View style={customStyles.message_container}>
           <Text style={customStyles.message_container_title}>{t("Here you can find an overview of the courses at Maua")}</Text>
           <Text style={customStyles.message_container_text}>{t("Provided by Maua University")}</Text>
         </View>
-        <Text style={customStyles.body_text}>{t("University activities")}</Text>
         <View style={customStyles.row_align_center}>
+        <ActivityIndicator size="large" color="#095DAC" animating={isLoading}/>
               <View style={""}>
-                {courses.map((course, index) => (
+                {data.map((course, index) => (
                   <Course key={index} course={course} />
                 ))}
               </View>

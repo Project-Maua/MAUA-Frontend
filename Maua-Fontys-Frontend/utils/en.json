@@ -19,13 +19,13 @@
         "This is a sample card box in React Native.": "This is a sample card box in React Native.",
         "More info": "More info",
 
-        "University Activities": "University Activities",
+        "Your activities on day": "Your activities on day",
         "Tracking": "Tracking",
         
         "Go to Maua": "Go to Maua",
 
         "Student organisations of Maua": "Student organisations of Maua",
-        "Organisations": "Organisations",
+        "Organizations": "Organizations",
 
         "Courses": "Courses",
         "About Maua": "About Maua",
@@ -39,6 +39,29 @@
         "Maua Courses": "Maua Courses",
         "Here you can find an overview of the courses at Maua": "Here you can find an overview of the courses at Maua",
 
-        "Maua staff": "Maua staff"
+        "Maua staff": "Maua staff",
+
+        "en": "en",
+
+        "What can you find?": "What can you find?",
+        "here you can find everything you need to know about this activity.": "here you can find everything you need to know about this activity.",
+
+        "Activity information": "Activity information",
+        "Start Time": "Start Time",
+        "End Time": "End Time",
+        "Location": "Location",
+        "Description": "Description",
+
+        "Course information": "Course information",
+        "here you can find everything you need to know about this course.": "here you can find everything you need to know about this course.",
+        "Shift": "Shift",
+        "Tuition": "Tuition",
+        "Duration": "Duration",
+
+        "Orginisation information": "Orginisation information",
+        "here you can find everything you need to know about this orginisation.": "here you can find everything you need to know about this orginisation.",
+
+        "Your activities today": "Your activities today",
+        "Your next activity": "Your next activity"
     }
 }

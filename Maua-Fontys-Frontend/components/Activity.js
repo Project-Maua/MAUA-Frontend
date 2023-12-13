@@ -2,9 +2,11 @@ import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import {customStyles} from '../assets/style'
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from 'react-i18next'
 
 const Activity = ({activity}) => {
-  const navigation = useNavigation();
+  const {t, i18n} = useTranslation()
+  const navigation = useNavigation()
 
   const handleMoreInfo = () => {
     navigation.navigate("activityInfo", {info: activity})
@@ -21,7 +23,7 @@ const Activity = ({activity}) => {
                 <TouchableOpacity onPress={handleMoreInfo}
                   style={customStyles.button}
                 >
-                  <Text style={customStyles.button_text}>More info</Text>
+                  <Text style={customStyles.button_text}>{t('More info')}</Text>
                 </TouchableOpacity> 
             </View>
       </View>

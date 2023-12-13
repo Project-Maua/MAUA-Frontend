@@ -1,33 +1,25 @@
 import React from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { useTranslation } from 'react-i18next'
+import { customStyles } from '../assets/style'
 
-const CardBox = ({ title, text, buttonText, onPressButton }) => {
+const CardBox = ({ title, message, image }) => {
+  const {t, i18n} = useTranslation()
+
   return (
-    <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.text}>{text}</Text>
-      <Button title={buttonText} onPress={onPressButton} />
+    <View style={customStyles.card}>
+    <Image source={{uri: image}} style={customStyles.card_image} />
+    <View style={customStyles.card_content}>
+      <Text style={customStyles.card_title}>{t(title)}</Text>
+      <Text style={customStyles.card_message}>{t(message)}</Text>
+      <View style={customStyles.containeritem}>            
+        <TouchableOpacity onPress={""} style={customStyles.button}>
+          <Text style={customStyles.button_text}>{ t('More info') } </Text>
+        </TouchableOpacity>
+      </View>
     </View>
+  </View>
   )
 }
-
-const styles = StyleSheet.create({
-  card: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 10,
-    padding: 20,
-    margin: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  text: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
-})
 
 export default CardBox

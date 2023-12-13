@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, ActivityIndicator } from 'react-native'
 import Notifications from '../components/Notifications'
 import {customStyles} from '../assets/style'
 import Constants from '../utils/Constants'
@@ -8,7 +8,7 @@ const NotificationPage = () => {
     const [data, setData] = useState([])
     const [isLoading, setLoading] = useState(true)
   
-    const getActivities = async () => {
+    const getNotifications = async () => {
       try {
         const response = await fetch(Constants.notigications_url, {
           header:{
@@ -24,8 +24,13 @@ const NotificationPage = () => {
       }
     }
   
+    const getMock = () => {
+      setData(notifications)
+      setLoading(false)
+    }
+
     useEffect(() => {
-      getActivities()
+       getMock() // Change to getNotifications()
     }, [])
 
     return (
@@ -39,8 +44,9 @@ const NotificationPage = () => {
                         <Text style={customStyles.message_container_text}>Here you can find you latest notifications.</Text>
                     </View>
                     <Text style={customStyles.body_text}>Notifications</Text>
+                    <ActivityIndicator size="large" color="#095DAC" animating={isLoading}/>
                     <View>
-                        {notifications.map((notification, index) => (
+                        {data.map((notification, index) => (
                             <Notifications key={index} notification={notification} />
                         ))}
                     </View>

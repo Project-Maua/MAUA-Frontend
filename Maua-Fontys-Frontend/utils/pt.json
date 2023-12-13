@@ -20,13 +20,13 @@
         "This is a sample card box in React Native.": "Este é um exemplo de card box em React Native.",
         "More info": "Sobre",
 
-        "University Activities": "Atividades da Universidade",
+        "Your activities on day": "Suas atividades no dia",
         "Tracking": "Trilha",
         
         "Go to Maua": "Ir para Mauá",
 
         "Student organisations of Maua": "Organizações Estudantis da Mauá",
-        "Organisations": "Organizações",
+        "Organizations": "Organizações",
 
         "Courses": "Cursos",
         "About Maua": "Sobre a Mauá",
@@ -40,7 +40,29 @@
         "Maua Courses": "Cursos da Mauá",
         "Here you can find an overview of the courses at Maua": "Aqui você pode encontrar mais informações sobre os cursos da Mauá",
 
-        "Maua staff": "Corpo Administrativo"
+        "Maua staff": "Corpo Administrativo",
 
+        "en": "pt-br",
+
+        "What can you find?": "O que você pode encontrar?",
+        "here you can find everything you need to know about this activity.": "aqui você encontra tudo o que precisa saber sobre esta atividade.",
+
+        "Activity information": "Informações da Atividade",
+        "Start Time": "Horário de Início",
+        "End Time": "Horário de Termino",
+        "Location": "Local",
+        "Description": "Descrição",
+
+        "Course information": "Informações do Curso",
+        "here you can find everything you need to know about this course.": "aqui você encontra tudo o que precisa saber sobre este curso.",
+        "Shift": "Período",
+        "Tuition": "Mensalidade",
+        "Duration": "Duração",
+
+        "Orginisation information": "Informações da Organização",
+        "here you can find everything you need to know about this orginisation.": "aqui você encontra tudo o que precisa saber sobre esta organização.",
+
+        "Your activities today": "Suas atividades hoje",
+        "Your next activity": "Sua próxima atividade"
     }
 }

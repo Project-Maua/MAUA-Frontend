@@ -1,26 +1,17 @@
-import { useState } from 'react'
 import { View } from 'react-native'
 import SettingButton from '../components/SettingButton'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
 
 const SettingsPage = () => {
-
-  const [currentLanguage, setCurrentLanguage] = useState('en')
-
   const {t, i18n} = useTranslation()
 
-  const changeLanguage = (value) => {
-    console.log(value)
-    if (value === 'en'){
-      setCurrentLanguage('pt')
-    }
-    else{
-      setCurrentLanguage('en')
-    }
-    i18n.changeLanguage(currentLanguage)
+  const changeLanguage = () => {
+    const newLanguage = (i18n.language === 'en') ? 'pt':'en'
+
+    i18n.changeLanguage(newLanguage)
     .then( ()=> {
-      console.log("Language changed")
+      console.log("Language changed to " + t(i18n.language))
     })
     .catch((err) => {
       console.log(err)
@@ -29,8 +20,8 @@ const SettingsPage = () => {
 
   return (
     <View>
-      <SettingButton onPress={()=>changeLanguage(currentLanguage)} text={t('Language')} icon='globe' />
-      {/* <SettingButton text={t('Switch mode')} icon='arrow-switch' /> */}
+      <SettingButton onPress={changeLanguage} text={t('Language')} icon='globe' />
+      <SettingButton text={t('Switch mode')} icon='arrow-switch' />
       <SettingButton text={t('About')} icon='info' />
       <SettingButton text={t('Logout')} icon='sign-out' />
     </View>    

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, ScrollView, Text, Image } from 'react-native'
+import { View, ScrollView, Text, Image, ActivityIndicator } from 'react-native'
 import Activity from '../components/Activity.js'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
@@ -30,8 +30,13 @@ const ActivityPage = ({}) => {
     }
   }
 
+  const getMock = () => {
+    setData(Activities)
+    setLoading(false)
+  }
+
   useEffect(() => {
-    // getActivities()
+     getMock() // Change to getActivities()
   }, [])
   
   return (
@@ -44,10 +49,11 @@ const ActivityPage = ({}) => {
             <Text style={customStyles.header_text}>{t("University of Technology Maua")}</Text>
           </View>
         </View>
-        <Text style={customStyles.body_text}>{t("University Activities")}</Text>
+        <Text style={customStyles.body_text}>{t("Maua activities")}</Text>
+        <ActivityIndicator size="large" color="#095DAC" animating={isLoading}/>
         <View style={customStyles.row_align_center}>
               <View style={""}>
-                {Activities.map((activity, index) => (
+                {data.map((activity, index) => (
                   <Activity key={index} activity={activity} />
                 ))}
               </View>

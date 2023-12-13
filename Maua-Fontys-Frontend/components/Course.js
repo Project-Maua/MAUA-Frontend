@@ -2,8 +2,10 @@ import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import {customStyles} from '../assets/style'
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from 'react-i18next'
 
 const Course = ({course}) => {
+  const {t, i18n} = useTranslation()
   const navigation = useNavigation();
 
     const handleMoreInfo = () => {
@@ -20,7 +22,7 @@ const Course = ({course}) => {
                   <TouchableOpacity onPress={handleMoreInfo}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>More info</Text>
+                    <Text style={customStyles.button_text}>{t('More info')}</Text>
                   </TouchableOpacity> 
               </View>
         </View>

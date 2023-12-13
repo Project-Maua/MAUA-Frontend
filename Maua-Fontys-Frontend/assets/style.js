@@ -33,7 +33,8 @@ export const customStyles = StyleSheet.create({
       marginLeft: 15,
     },
     body_background_agendapage:{
-      backgroundColor: '#095dac'
+      backgroundColor: '#095dac',
+      flex: 1
     },
   //Row
     row:{
@@ -317,12 +318,9 @@ export const customStyles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  card_subtitle: {
-    fontSize: 18,
-    fontWeight: 'bold'
-  },
   card_message: {
     fontSize: 16,
+    marginBottom: 20
   },
   //Activity card
   activity_card: {
@@ -380,22 +378,22 @@ export const customStyles = StyleSheet.create({
   },
   description_card_message: {
     fontSize: 16,
+    marginBottom: 10
   },
   //Agenda container
   agenda_container: {
     backgroundColor: '#095dac',
-    padding: 40
+    padding: 40,
+    paddingVertical: 10
   },
   agenda: {
     borderRadius: 20,
     padding: 10
   },
   agenda_activity_container:{
-    flexGrow: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingVertical: 20,
-      borderRadius: 20,
-      backgroundColor: '#fff'
+    paddingVertical: 20,
+    paddingHorizontal: '10%',
+    borderRadius: 20,
+    backgroundColor: '#fff'
   },
   })

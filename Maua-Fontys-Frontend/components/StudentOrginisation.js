@@ -18,7 +18,7 @@ const StudentOrganization = (props) => {
                   <TouchableOpacity onPress={""}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>More info</Text>
+                    <Text style={customStyles.button_text}>{t('More info')}</Text>
                   </TouchableOpacity> 
               </View>
         </View>

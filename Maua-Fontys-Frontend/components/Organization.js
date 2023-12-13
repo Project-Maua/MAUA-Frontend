@@ -2,12 +2,14 @@ import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import {customStyles} from '../assets/style'
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from 'react-i18next'
 
 const Organization = ({organization}) => {
+  const {t, i18n} = useTranslation()
   const navigation = useNavigation();
 
     const handleMoreInfo = () => {
-      navigation.navigate("descriptionInfoPage", {info: organization})
+      navigation.navigate("organizationInfoPage", {info: organization})
     }
 
     return (
@@ -20,7 +22,7 @@ const Organization = ({organization}) => {
                   <TouchableOpacity onPress={handleMoreInfo}
                     style={customStyles.button}
                   >
-                    <Text style={customStyles.button_text}>More info</Text>
+                    <Text style={customStyles.button_text}>{t('More info')}</Text>
                   </TouchableOpacity> 
               </View>
         </View>

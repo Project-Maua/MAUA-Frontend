@@ -3,13 +3,18 @@ import Course from '../components/Course.js'
 import {customStyles} from '../assets/style'
 import '../utils/i18n'
 import { useTranslation } from 'react-i18next'
+import { useNavigation } from '@react-navigation/native'
 import Constants from '../utils/Constants.js'
 import CardBox from '../components/CardBox.js'
 
 const cardImage = require('../assets/schoolmaua.jpg')
+const fontysImage = require('../assets/fontys.jpg')
 const AboutPage = () => {
   const {t, i18n} = useTranslation()
-
+  const navigation = useNavigation();
+  const handleMoreInfo = () => {
+    navigation.navigate("MauaFontysInfoPage")
+  }
   return (
     <ScrollView>
     <View>
@@ -25,7 +30,22 @@ const AboutPage = () => {
             <CardBox title={ t("Rector") } message={'...'} image={Constants.rectorImage} />
         </View>
         <Text style={customStyles.body_text}>{t("Internal Program")}</Text>
+        
         <View style={customStyles.row_align_center}>
+        <View style={customStyles.activity_card}>
+          <Image source={fontysImage} style={customStyles.card_image} />
+            <View style={customStyles.card_content}>
+                <Text style={customStyles.card_title}>Project Maua-Fontys</Text>
+                <Text style={customStyles.card_message}>Students from the Netherlands and Brazil worked together to create the Maua application.</Text>
+                  <View style={customStyles.containeritem}>            
+                      <TouchableOpacity onPress={handleMoreInfo}
+                        style={customStyles.button}
+                      >
+                        <Text style={customStyles.button_text}>{t('More info')}</Text>
+                      </TouchableOpacity> 
+                  </View>
+            </View>
+        </View>
               <View style={""}>
                 {about.map((course, index) => (
                   <Course key={index} course={course} />

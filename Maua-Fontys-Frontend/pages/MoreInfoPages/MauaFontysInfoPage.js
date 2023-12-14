@@ -33,8 +33,8 @@ const MauaFontysInfoPage = ({route}) => {
                 <Text style={customStyles.card_message}>{"Stijn Hoeks: https://www.linkedin.com/in/stijn-hoeks-3764a4193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}</Text>
                 <Text style={customStyles.card_message}>{"Jarno Looij: https://www.linkedin.com/in/jarno-looij-176b26180?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}</Text>
                 <Text style={customStyles.card_message}>{"Tim Spitters: https://www.linkedin.com/in/tim-spitters?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}</Text>
-                <Text style={customStyles.card_message}>{"Jason Spaninks: "}</Text>
-                <Text style={customStyles.card_message}>{"Ben van der Linden: "}</Text>
+                <Text style={customStyles.card_message}>{"Jason Spaninks: https://nl.linkedin.com/in/jason-spaninks-461695193 "}</Text>
+                <Text style={customStyles.card_message}>{"Ben van der Linden: https://www.linkedin.com/in/ben-van-der-linden-36a4a4193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}</Text>
                 <Text style={customStyles.card_title}>{"Teachers/Professors"}</Text>
                 <Text style={customStyles.card_message}>{"From the Netherlands: Mark Mestrom"}</Text>
                 <Text style={customStyles.card_message}>{"From Brazil: Rodrigo Bossini"}</Text>

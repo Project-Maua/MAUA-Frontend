@@ -25,7 +25,7 @@ const MauaFontysInfoPage = ({route}) => {
                 <Text style={customStyles.card_message}>{"Students from Fontys in the Netherlands and students from Maua University in Brazil worked together to put together this application. The students who contributed to this project are:"}</Text>
                 <Text style={customStyles.card_title}>{"From Brazil:"}</Text>
                 <Text style={customStyles.card_message}>{"Raphael Marchetti Calciolari: "}</Text>
-                <Text style={customStyles.card_message}>{"Matheus Nakai: "}</Text>
+                <Text style={customStyles.card_message}>{"Matheus Nakai: https://www.linkedin.com/in/matheus-nakai-36051a182/"}</Text>
                 <Text style={customStyles.card_message}>{"Gustavo Zamboni: "}</Text>
                 <Text style={customStyles.card_message}>{"Martin Ropke: "}</Text>
                 <Text style={customStyles.card_title}>{"From the Netherlands:"}</Text>

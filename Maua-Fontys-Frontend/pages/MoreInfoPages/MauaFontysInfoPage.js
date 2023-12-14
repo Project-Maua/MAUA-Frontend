@@ -31,10 +31,14 @@ const MauaFontysInfoPage = ({route}) => {
                 <Text style={customStyles.card_title}>{"From the Netherlands:"}</Text>
                 <Text style={customStyles.card_message}>{"Chantal: https://www.linkedin.com/in/chantal-maas-605aa22a4/"}</Text>
                 <Text style={customStyles.card_message}>{"Stijn: https://www.linkedin.com/in/stijn-hoeks-3764a4193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}</Text>
-                <Text style={customStyles.card_message}>{"Ben: "}</Text>
                 <Text style={customStyles.card_message}>{"Jarno: https://www.linkedin.com/in/jarno-looij-176b26180?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}</Text>
-                <Text style={customStyles.card_message}>{"Jason: "}</Text>
                 <Text style={customStyles.card_message}>{"Tim: https://www.linkedin.com/in/tim-spitters?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}</Text>
+                <Text style={customStyles.card_message}>{"Jason: "}</Text>
+                <Text style={customStyles.card_message}>{"Ben: "}</Text>
+                <Text style={customStyles.card_title}>{"Teachers/Professors"}</Text>
+                <Text style={customStyles.card_message}>{"From the Netherlands: Mark"}</Text>
+                <Text style={customStyles.card_message}>{"From Brazil: Rodrigo"}</Text>
+                <Text style={customStyles.card_title}>{"More information"}</Text>
                 <Text style={customStyles.card_message}>{"For more information about the students and the schools, please check the links below"}</Text>
                 <Text style={customStyles.card_message}>{"https://maua.br/ "}</Text>
                 <Text style={customStyles.card_message}>{"https://www.fontys.nl/Home.htm"}</Text>
